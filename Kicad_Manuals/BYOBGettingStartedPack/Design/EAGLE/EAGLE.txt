@@ -1,0 +1,5 @@
+EAGLE from Cadsoft is a popular industry rated hardware design tool. You will be able to use the EAGLE Light and EAGLE Hobbyist licenses to make your BoosterPack, even if you sell them independently (exception only applies to BYOB Build Your Own BoosterPack process). Learn more and download at http://www.cadsoftusa.com/eagle-pcb-design-software/?language=en.  
+
+See full tutorials and reference material at http://www.cadsoftusa.com/training/?language=en
+
+

@@ -1,0 +1,3 @@
+Altium is a popular industry rated hardware design tool.  Learn more at www.altium.com
+
+Watch training videos: http://altiumvideos.live.altium.com/

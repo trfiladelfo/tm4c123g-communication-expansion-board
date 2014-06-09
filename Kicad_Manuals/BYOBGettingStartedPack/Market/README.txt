@@ -1,0 +1,1 @@
+List of popular channels for hardware sales. This is a good place to get started, but not an exhaustive list.  Putting your product up for sale is solely your responsiblity and proper research into the available channels before acting is always a good idea.  This list only acts as a suggestion guide.

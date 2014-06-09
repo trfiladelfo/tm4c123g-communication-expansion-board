@@ -1,0 +1,2 @@
+To configure the device peripherals easily and intuitively using a graphical user interface
+(GUI), see the Tiva C Series Pinmux Utility found at www.ti.com/tool/lm4f_pinmux. This easyto-use interface makes setting up alternate functions for GPIOs simple and error-free.

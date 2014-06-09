@@ -1,0 +1,4 @@
+Fritzing is an open-source hardware initiative to support designers, artists, researchers and hobbyists to work creatively with interactive electronics. Breadboard, schematic, PCB, and Code view are offered in this tool, making it very easy to diagram / document circuits as well as build them. Learn more at www.fritzing.org.
+
+You can drag in a LaunchPad to your workspace inside the latest releases of Fritzing and work directly from there to create custom circuits. Click on the LaunchPad rocket logo on the right hand side or search launchpad in the parts list. 
+
