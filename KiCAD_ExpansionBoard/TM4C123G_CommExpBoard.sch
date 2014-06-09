@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:boosterpack
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,6 +30,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:transceiver
 LIBS:TM4C123G_CommExpBoard-cache
 EELAYER 27 0
 EELAYER END
@@ -38,7 +40,7 @@ Sheet 1 4
 Title "TM4C123G Communication Expansion Board"
 Date "9 jun 2014"
 Rev "0.1"
-Comp "Luca Buccolini, student @ Università Politecnica delle Marche"
+Comp "Luca Buccolini, Student @ Università Politecnica delle Marche"
 Comment1 "Expansion Board for the Texas Instruments TM4C123G Launchpad "
 Comment2 ""
 Comment3 ""
@@ -589,7 +591,7 @@ B6 6C 49 2B C0 12 42 88 00 74 66 AC 01 3A 3A 3A 34 07 1D 21 84 54 82 56 7E 23 84
 0A 87 C2 89 10 42 88 C2 A1 70 22 84 10 A2 70 28 9C 08 21 84 28 1C 0A 27 42 08 21 0A 87 C2 89 10 
 42 88 C2 A1 70 22 84 10 A2 70 28 9C 08 21 84 28 1C 0A 27 42 08 21 0A 87 C2 89 10 42 88 C2 A1 70 
 22 84 10 A2 70 54 9E 3E 7D CA 45 44 56 4D 37 84 10 42 08 29 F7 FF 00 67 C4 73 B0 F1 41 96 DF 00 
-00 00 00 49 45 4E 44 AE 42 60 82 90 $EndBitmap
+00 00 00 49 45 4E 44 AE 42 60 82 DF $EndBitmap
 EndData
 $EndBitmap
 $EndSCHEMATC

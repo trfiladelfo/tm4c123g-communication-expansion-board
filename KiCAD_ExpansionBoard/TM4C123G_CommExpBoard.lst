@@ -1,0 +1,10 @@
+eeschema (2013-07-07 BZR 4022)-stable  >> Creation date: 6/9/2014 6:57:35 PM
+#Cmp ( order = Reference )
+| U?         SN65HVD11   ; MODULE      ; Farnell     ; 1100955     ; SN65HVD11D  ;             ;             ;             ;             ;             
+#End Cmp
+
+#Cmp ( order = Value )
+| SN65HVD11    U?        ; MODULE      ; Farnell     ; 1100955     ; SN65HVD11D  ;             ;             ;             ;             ;             
+#End Cmp
+
+#End List
