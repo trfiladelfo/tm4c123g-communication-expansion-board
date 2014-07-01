@@ -1,0 +1,22 @@
+Circuit: * C:\Users\Luca\Dropbox\Università\Progettazione di Sistemi Embedded\PSE_Project\Power_Supply\LTSPICE_PS_SIM\BackCurrent_PMOS_sim.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Thu Jun 12 21:15:25 2014
+Total elapsed time: 0.265 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 5068
+traniter = 5060
+tranpoints = 2028
+accept = 1829
+rejected = 199
+matrix size = 10
+fillins = 7
+solver = Normal
+Matrix Compiler1: 792 bytes object code size  0.1/0.1/[0.0]
+Matrix Compiler2: 870 bytes object code size  0.2/0.2/[0.1]
+
+

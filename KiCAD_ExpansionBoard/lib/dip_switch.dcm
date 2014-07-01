@@ -1,0 +1,7 @@
+EESchema-DOCLIB  Version 2.0  Date: 7/1/2014 15:50:49
+#
+$CMP DIP_SWITCH_x1
+D Single dip switch
+$ENDCMP
+#
+#End Doc Library

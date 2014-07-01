@@ -1,0 +1,14 @@
+(datafile
+  (version 1)
+    (date "6/12/2014 12:54:01 AM")
+      (tool "pcb_calculator (2013-07-07 BZR 4022)-stable")
+        (regulators
+          (regulator TPS62160
+            (reg_vref 0.8)
+            (reg_type normal)
+          )
+        )
+      )
+    )
+  )
+)

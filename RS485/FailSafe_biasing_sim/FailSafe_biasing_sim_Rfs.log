@@ -1,0 +1,21 @@
+Circuit: * C:\Users\Luca\Dropbox\Università\Progettazione di Sistemi Embedded\PSE_Project\RS485\FailSafe_biasing_sim\FailSafe_biasing_sim_Rfs.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Mon Jun 16 14:44:12 2014
+Total elapsed time: 0.133 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 3
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 4
+fillins = 0
+solver = Normal
+Matrix Compiler1: 100 bytes object code size
+Matrix Compiler2: 248 bytes object code size
+

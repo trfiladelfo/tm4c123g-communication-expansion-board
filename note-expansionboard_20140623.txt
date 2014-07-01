@@ -1,0 +1,36 @@
+TVS sui +12V: serve bidirezionale, altrimenti se si inverte la polarità si brucia il diodo. Che ne dice di un MMBZ18VAL?
+
+Resistori di pull-up/down: R2, R8 e R9 sono superflui (sono integrati nei transceiver), R18 lo avrei messo su SDN piuttosto che su SSEL: se il micro è in reset o bloccato, è bene che anche la radio stia spenta.
+Su R1 monterei un 10 kΩ, è più facile cortocircuitarlo se desse problemi ad alta velocità che non toglierlo se desse problemi di disturbi EMC.
+RFM_CLK: il verso del segnale è dal modulo radio verso la CPU!
+
+P2, P3, P4: non mi piace molto l'idea di dover inserire/togliere tre jumper alla volta. Non ci si può mettere un interruttorino a slitta? Serve almeno un 3PST, che sono rari, ma i 4PDT non costano molto se c'è spazio per metterli (tipo EG4208)
+
+P1: ci saranno problemi a portare una linea CAN non protetta su un jumper? Io avrei messo o due resistori "sdoppiati" in modo da avere simmetria, o un interruttore pure qui.
+
+R19-R20: non mi portano i conti del divider ratio. Ad ogni modo, mi pare sottodimensionato. Io lascerei un po' di headroom per potersi accorgere di sovratensioni. Direi che fare 1 LSB = 5 mV potrebbe essere una cosa buona: non saturiamo del tutto l'A/D, ma la risoluzione rimane comunque decente. Ciò significa un fondo scala di 20.48 V a 3.3 V di alimentazione e quindi un rapporto di 6.206
+
+Sullo spare-function header è opportuno aggiungere anche massa e alimentazione.
+A questo punto il suo pin-out diverrebbe:
+1 - +3.3V
+2 - GND
+3 - EXT_AIN0
+4 - EXT_AIN1
+5 - RFM_GPIO0
+6 - RFM_GPIO1
+7 - I2C0_SDA
+8 - I2C0_SCL
+9 - I2C1_SDA
+10- I2C1_SCL
+(ho rinumerato i pin dedicati all'I2C in modo che si possa usare un connettore più corto se non servono entrambe le porte,
+così ogni funzione ha una riga di pin dedicata: power, analog, GPIO, I2C0, I2C1)
+
+
+Ora le dolenti note: la protezione da corrente inversa sullo switching è collegata male!
+
+Secondo me i 3.3V EB e TLP vanno connessi direttamente assieme, non ci deve essere distinzione.
+Ciò rende inutile il led D1 (c'è connesso esattamente sullo stesso posto sulla board texas).
+Così facendo si ottiene una alimentazione indifferentemente dai +12 o dai +5, con priorità dai +5,
+in quanto la loro presenza disconnetterebbe l'uscita dello switching.
+Mi pare che il regolatore integrato nella board texas sia di per se protetto contro la corrente inversa.
+Bisognerebbe anche trovare un modo per tenere spento U2 quando ci sono i +5V: il diodo parassita di Q1 non credo riesca ad accendersi e quindi lo switching si troverebbe a lavorare essenzialmente senza carico, ma forse è meglio spegnerlo del tutto. Un transistor che ne porta basso l'EN, che ne dice, val la pena? Bisogna proteggere il suo gate, e quello di Q1, da sovratensioni sulla linea +5V (che viene dall'USB)?
