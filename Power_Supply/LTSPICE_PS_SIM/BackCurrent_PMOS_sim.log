@@ -2,8 +2,8 @@ Circuit: * C:\Users\Luca\Dropbox\Università\Progettazione di Sistemi Embedded\PS
 
 Direct Newton iteration for .op point succeeded.
 
-Date: Thu Jun 12 21:15:25 2014
-Total elapsed time: 0.265 seconds.
+Date: Wed Jul 02 10:00:45 2014
+Total elapsed time: 0.377 seconds.
 
 tnom = 27
 temp = 27
@@ -16,7 +16,7 @@ rejected = 199
 matrix size = 10
 fillins = 7
 solver = Normal
-Matrix Compiler1: 792 bytes object code size  0.1/0.1/[0.0]
+Matrix Compiler1: 792 bytes object code size  0.2/0.1/[0.1]
 Matrix Compiler2: 870 bytes object code size  0.2/0.2/[0.1]
 
 

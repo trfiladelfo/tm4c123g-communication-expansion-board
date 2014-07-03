@@ -36,6 +36,7 @@ LIBS:power_flag
 LIBS:TPS62160
 LIBS:transceiver
 LIBS:tvs
+LIBS:bid_tvs
 LIBS:TM4C123G_CommExpBoard-cache
 EELAYER 27 0
 EELAYER END
@@ -43,8 +44,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 3
 Title "TM4C123G Communication Expansion Board"
-Date "1 jul 2014"
-Rev "0.1"
+Date "3 jul 2014"
+Rev "0.2"
 Comp "Luca Buccolini, Student @ Università Politecnica delle Marche"
 Comment1 "Expansion Board for the Texas Instruments TM4C123G Launchpad "
 Comment2 ""
@@ -75,7 +76,7 @@ F17 "RFM_MOSI" I L 6350 4900 60
 F18 "RFM_MISO" O L 6350 5000 60 
 F19 "RFM_SSEL" I L 6350 5100 60 
 F20 "RFM_SCLK" I L 6350 5200 60 
-F21 "RFM_CLK" I L 6350 5300 60 
+F21 "RFM_CLK" O L 6350 5300 60 
 F22 "RFM_NIRQ" O L 6350 5400 60 
 $EndSheet
 Wire Wire Line
@@ -145,6 +146,6 @@ F18 "RFM_NIRQ" I R 4750 5400 60
 F19 "RFM_MISO" I R 4750 5000 60 
 F20 "RFM_SSEL" O R 4750 5100 60 
 F21 "RFM_SCLK" O R 4750 5200 60 
-F22 "RFM_CLK" O R 4750 5300 60 
+F22 "RFM_CLK" I R 4750 5300 60 
 $EndSheet
 $EndSCHEMATC
