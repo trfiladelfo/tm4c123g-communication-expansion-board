@@ -44,8 +44,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
 Title "TM4C123G Communication Expansion Board"
-Date "3 jul 2014"
-Rev "0.2"
+Date "11 jul 2014"
+Rev "0.3"
 Comp "Luca Buccolini, Student @ Università Politecnica delle Marche"
 Comment1 "Expansion Board for the Texas Instruments TM4C123G Launchpad "
 Comment2 ""
@@ -1018,21 +1018,10 @@ F 3 "~" H 9050 800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR047
-U 1 1 53B3C4D5
-P 5500 4450
-F 0 "#PWR047" H 5500 4540 20  0001 C CNN
-F 1 "+5V" H 5500 4540 30  0000 C CNN
-F 2 "~" H 5500 4450 60  0000 C CNN
-F 3 "~" H 5500 4450 60  0000 C CNN
-	1    5500 4450
-	1    0    0    -1  
-$EndComp
-$Comp
-L +3.3V #PWR048
+L +3.3V #PWR047
 U 1 1 53B3C4E8
 P 5850 2850
-F 0 "#PWR048" H 5850 2810 30  0001 C CNN
+F 0 "#PWR047" H 5850 2810 30  0001 C CNN
 F 1 "+3.3V" H 5850 2960 30  0000 C CNN
 F 2 "~" H 5850 2850 60  0000 C CNN
 F 3 "~" H 5850 2850 60  0000 C CNN
@@ -1044,45 +1033,14 @@ Wire Wire Line
 Wire Wire Line
 	9050 4100 9050 4000
 $Comp
-L +5V #PWR049
+L +5V #PWR048
 U 1 1 53B43EA6
 P 9050 4000
-F 0 "#PWR049" H 9050 4090 20  0001 C CNN
+F 0 "#PWR048" H 9050 4090 20  0001 C CNN
 F 1 "+5V" H 9050 4090 30  0000 C CNN
 F 2 "~" H 9050 4000 60  0000 C CNN
 F 3 "~" H 9050 4000 60  0000 C CNN
 	1    9050 4000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5500 4550 5500 4450
-Wire Wire Line
-	5500 5150 5500 4950
-$Comp
-L GND #PWR050
-U 1 1 53B44049
-P 5500 5150
-F 0 "#PWR050" H 5500 5150 30  0001 C CNN
-F 1 "GND" H 5500 5080 30  0001 C CNN
-F 2 "" H 5500 5150 60  0000 C CNN
-F 3 "" H 5500 5150 60  0000 C CNN
-	1    5500 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L BID_TVS TVS4
-U 1 1 53B4413C
-P 5500 4750
-F 0 "TVS4" H 5650 4850 40  0000 C CNN
-F 1 "ESD5B5.0ST1G" H 5800 4700 30  0000 C CNN
-F 2 "SOD-523_MD" V 5200 4750 60  0001 C CNN
-F 3 "http://www.onsemi.com/pub/Collateral/ESD5B5.0ST1G.PDF" H 5750 4800 60  0001 C CNN
-F 4 "Farnell" H 5500 4750 60  0001 C CNN "Supplier 1"
-F 5 "2317513" H 5500 4750 60  0001 C CNN "Supplier 1 P/N"
-F 6 "ON SEMICONDUCTOR" H 5500 4750 60  0001 C CNN "Producer"
-F 7 "ESD5B5.0ST1G" H 5500 4750 60  0001 C CNN "Producer P/N"
-F 8 "ESD PROTECTION DIODE, 5V, SOD-523-2" H 5500 4750 60  0001 C CNN "Descriprion"
-	1    5500 4750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1101,6 +1059,6 @@ F 8 "DIODE, TVS, 12V, 1500W, SMC" H 2300 4800 60  0001 C CNN "Descriprion"
 	1    2300 4800
 	1    0    0    -1  
 $EndComp
-Text Notes 5050 4200 0    60   ~ 0
-Transient protections\nof +5V (USB) supply rail\n
+Text Notes 350  6800 0    60   ~ 0
+BUFFERIZZA IN INGRESSO ALL'ADC--> Radc=2k5!!
 $EndSCHEMATC
