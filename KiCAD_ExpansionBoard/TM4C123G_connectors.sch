@@ -44,8 +44,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
 Title "TM4C123G Communication Expansion Board"
-Date "5 aug 2014"
-Rev "0.3.3"
+Date "6 aug 2014"
+Rev "0.3.4"
 Comp "Luca Buccolini, Student @ Università Politecnica delle Marche"
 Comment1 "Expansion Board for the Texas Instruments TM4C123G Launchpad "
 Comment2 ""
@@ -931,7 +931,7 @@ L CONN_5X2 P10
 U 1 1 53B316DE
 P 6350 3100
 F 0 "P10" H 6350 3400 60  0000 C CNN
-F 1 "EB_GPIO0" V 6350 3100 50  0000 C CNN
+F 1 "GPIO0" V 6350 3100 50  0000 C CNN
 F 2 "~" H 6350 3100 60  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1697536.pdf" H 6350 3100 60  0001 C CNN
 F 4 "Farnell" H 6350 3100 60  0001 C CNN "Supplier 1"
