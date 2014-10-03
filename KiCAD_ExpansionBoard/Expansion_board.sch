@@ -44,7 +44,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 3
 Title "TM4C123G Communication Expansion Board"
-Date "7 aug 2014"
+Date "17 sep 2014"
 Rev "0.3.5"
 Comp "Luca Buccolini, Student @ Università Politecnica delle Marche"
 Comment1 "Expansion Board for the Texas Instruments TM4C123G Launchpad "
@@ -586,7 +586,7 @@ F 3 "~" H 8340 4960 60  0000 C CNN
 	1    8340 4960
 	1    0    0    -1  
 $EndComp
-Text Notes 6490 760  0    60   ~ 0
+Text Notes 6500 800  0    60   ~ 0
 RS-485 transceiver
 Text Notes 1440 2570 0    60   ~ 0
 CAN transceiver

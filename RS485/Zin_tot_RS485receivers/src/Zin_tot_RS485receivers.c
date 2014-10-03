@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define receiver_nr 256
+#define RECEIVER_NR 256
 #define UL (1.0/8.0)
 
 
@@ -21,10 +21,10 @@ int main(void) {
 	//calcolo l'impedenza parallello di tutti i ricevitori RS485 con UL specificata in define (1, 1/2, 1/4, 1/8)
 
 	printf("zin singolo ricevitore=%f\n",zin);
-	printf("N° di ricevitori collegati al bus=%d\n", receiver_nr);
+	printf("N° di ricevitori collegati al bus=%d\n", RECEIVER_NR);
 
 	float yin_tot=0.0;
-	for (i=0; i< receiver_nr; i++) {
+	for (i=0; i< RECEIVER_NR; i++) {
 		yin_tot+=1.0/zin;
 	}
 	float zin_tot=1.0/(yin_tot);

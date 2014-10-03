@@ -1,4 +1,4 @@
-Circuit: * C:\Users\Luca\Dropbox\Università\Progettazione di Sistemi Embedded\PSE_Project\Power_Supply\LT3502_BakCurrentProtection.asc
+Circuit: * C:\Users\Luca\Dropbox\Università\Progettazione di Sistemi Embedded\PSE_Project\Power_Supply\LTSPICE_PS_SIM\LT3502_BakCurrentProtection.asc
 
 Direct Newton iteration for .op point succeeded.
 Heightened Def Con from 0.00111088 to 0.00111089
@@ -326,8 +326,8 @@ Heightened Def Con from 0.00717824 to 0.00717824
 Heightened Def Con from 0.00718642 to 0.00718643
 Heightened Def Con from 0.00719006 to 0.00719006
 
-Date: Wed Jul 02 16:43:49 2014
-Total elapsed time: 51.261 seconds.
+Date: Thu Sep 18 12:08:19 2014
+Total elapsed time: 37.954 seconds.
 
 tnom = 27
 temp = 27
@@ -340,7 +340,7 @@ rejected = 202177
 matrix size = 40
 fillins = 4
 solver = Normal
-Matrix Compiler1: 2.23 KB object code size  1.0/0.8/[0.4]
-Matrix Compiler2: 2.94 KB object code size  0.7/1.5/[0.4]
+Matrix Compiler1: 2.23 KB object code size  1.1/0.4/[0.3]
+Matrix Compiler2: 2.94 KB object code size  0.3/0.4/[0.3]
 
 

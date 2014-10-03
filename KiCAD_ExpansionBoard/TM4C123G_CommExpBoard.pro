@@ -1,5 +1,5 @@
-update=8/6/2014 19:36:27
-last_client=kicad
+update=10/2/2014 14:02:25
+last_client=eeschema
 [cvpcb]
 version=1
 NetIExt=net
@@ -50,6 +50,8 @@ LibName21=TI_Booster_header_10p
 LibName22=jumper
 LibName23=ANT_PAD
 LibName24=TM4C123G_CommExpBoard_footprint
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=C:/Users/Luca/Dropbox/Università/Progettazione di Sistemi Embedded/PSE_Project/KiCAD_ExpansionBoard/lib
@@ -97,5 +99,3 @@ LibName35=TPS62160
 LibName36=transceiver
 LibName37=tvs
 LibName38=bid_tvs
-[general]
-version=1
