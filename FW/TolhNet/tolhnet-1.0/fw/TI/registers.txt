@@ -1,0 +1,41 @@
+ToLHnet application register map:
+
+00-7F (+0):
+	00-0F: application-specific
+	10-1F: application-specific
+	20-2F: application-specific
+	30-3F: application-specific
+	40-4F: generic bridges (UARTS, I²C, SPI, GPIO)
+	50-5F: generic bridges (UARTS, I²C, SPI, GPIO)
+	60-6F: generic ADCs/DACs/PWMs
+	70-7F: generic ADCs/DACs/PWMs
+80-BF (+1):
+	80-8F: application-specific
+	90-9F: application-specific
+	A0-AF: RFU
+	B0-BF: memory-mapped  8 bit I²C EEPROM access, up to 8 devices per bus, 2 buses.
+C0-DF (+2):
+	C0-CF: memory-mapped 16 bit I²C EEPROM access, up to 8 devices per bus, 2 buses.
+	D0-DF: memory-mapped memory access (e.g., internal EEPROM), up to 16 banks or 1 MiB.
+E0-EF (+3):    currently unassigned
+F0-F7 (+4):    currently unassigned
+F8-FB (+5):    currently unassigned
+FC-FD (+6):    currently unassigned
+FE-FE (+7):    currently unassigned
+FF-FF (+8):    currently unassigned
+
+
+D0-DF: memory-mapped memory access (e.g., internal EEPROM), up to 16 banks.
+	1101dddd aaaaaaaa aaaaaaaa
+dddd = bank select
+aaaaaaaa aaaaaaaa = 16 bit memory address.
+
+B0-BF: memory-mapped  8 bit I²C EEPROM access, up to 8 devices per bus, 2 buses.
+C0-CF: memory-mapped 16 bit I²C EEPROM access, up to 8 devices per bus, 2 buses.
+	1011bddd aaaaaaaa
+	1100bddd aaaaaaaa aaaaaaaa
+b = I²C bus number
+ddd = I²C EEPROM device number 1010ddd
+aaaaaaaa = 8 bit memory address.
+aaaaaaaa aaaaaaaa = 16 bit memory address.
+

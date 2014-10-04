@@ -44,8 +44,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 3
 Title "TM4C123G Communication Expansion Board"
-Date "17 sep 2014"
-Rev "0.3.5"
+Date "3 oct 2014"
+Rev "1.0"
 Comp "Luca Buccolini, Student @ Università Politecnica delle Marche"
 Comment1 "Expansion Board for the Texas Instruments TM4C123G Launchpad "
 Comment2 ""
@@ -200,32 +200,16 @@ L R R13
 U 1 1 5398B8C4
 P 9310 760
 F 0 "R13" V 9410 860 40  0000 C CNN
-F 1 "560" V 9317 761 40  0000 C CNN
+F 1 "1k2" V 9317 761 40  0000 C CNN
 F 2 "~" V 9240 760 30  0000 C CNN
-F 3 "http://www.farnell.com/datasheets/1720486.pdf" H 9310 760 30  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1851687.pdf" H 9310 760 30  0001 C CNN
 F 4 "Farnell" H 9310 760 60  0001 C CNN "Supplier 1"
-F 5 "1469945" H 9310 760 60  0001 C CNN "Supplier 1 P/N"
-F 6 "VISHAY DRALORIC" H 9310 760 60  0001 C CNN "Producer"
-F 7 "CRCW0805560RFKEA" H 9310 760 60  0001 C CNN "Producer P/N"
-F 8 "RESISTORE, 560R, 0.125W, 1%, 0805, SMD" H 9310 760 60  0001 C CNN "Descriprion"
+F 5 "1100315" H 9310 760 60  0001 C CNN "Supplier 1 P/N"
+F 6 "WELWYN" H 9310 760 60  0001 C CNN "Producer"
+F 7 "WCR0805-1K2FI" H 9310 760 60  0001 C CNN "Producer P/N"
+F 8 "WELWYN  WCR0805-1K2FI  RESISTORE, 0805 1K2" H 9310 760 60  0001 C CNN "Descriprion"
 	1    9310 760 
 	0    1    1    0   
-$EndComp
-$Comp
-L R R14
-U 1 1 5398B8CF
-P 8890 2010
-F 0 "R14" V 8990 2110 40  0000 C CNN
-F 1 "120" V 8897 2011 40  0000 C CNN
-F 2 "~" V 8820 2010 30  0000 C CNN
-F 3 "http://www.farnell.com/datasheets/1716708.pdf" H 8890 2010 30  0001 C CNN
-F 4 "Farnell" H 8890 2010 60  0001 C CNN "Supplier 1"
-F 5 "2073624" H 8890 2010 60  0001 C CNN "Supplier 1 P/N"
-F 6 "MULTICOMP" H 8890 2010 60  0001 C CNN "Producer"
-F 7 "MCMR08X1200FTL" H 8890 2010 60  0001 C CNN "Producer P/N"
-F 8 "RESISTOR, 0805, 120R, 1%, ANTI SULFUR" H 8890 2010 60  0001 C CNN "Descriprion"
-	1    8890 2010
-	-1   0    0    1   
 $EndComp
 $Comp
 L INDUCTOR_SMALL L1
@@ -527,22 +511,6 @@ Text HLabel 8490 5660 0    60   Output ~ 0
 RFM_GPIO1
 Text HLabel 8490 5560 0    60   Output ~ 0
 RFM_GPIO0
-$Comp
-L R R15
-U 1 1 539EE7C4
-P 8990 2860
-F 0 "R15" V 9090 2960 40  0000 C CNN
-F 1 "560" V 8997 2861 40  0000 C CNN
-F 2 "~" V 8920 2860 30  0000 C CNN
-F 3 "http://www.farnell.com/datasheets/1720486.pdf" H 8990 2860 30  0001 C CNN
-F 4 "Farnell" H 8990 2860 60  0001 C CNN "Supplier 1"
-F 5 "1469945" H 8990 2860 60  0001 C CNN "Supplier 1 P/N"
-F 6 "VISHAY DRALORIC" H 8990 2860 60  0001 C CNN "Producer"
-F 7 "CRCW0805560RFKEA" H 8990 2860 60  0001 C CNN "Producer P/N"
-F 8 "RESISTORE, 560R, 0.125W, 1%, 0805, SMD" H 8990 2860 60  0001 C CNN "Descriprion"
-	1    8990 2860
-	0    1    1    0   
-$EndComp
 Text Notes 9690 1310 0    60   ~ 0
 mount R 10 ohm in place \nof R 0 ohm to improve \nsurge/ESD/EFT protection
 $Comp
@@ -1250,4 +1218,36 @@ Wire Wire Line
 	9560 940  9560 760 
 Wire Wire Line
 	9240 2770 9240 2860
+$Comp
+L R R14
+U 1 1 5398B8CF
+P 8890 2010
+F 0 "R14" V 8990 2110 40  0000 C CNN
+F 1 "120" V 8897 2011 40  0000 C CNN
+F 2 "~" V 8820 2010 30  0000 C CNN
+F 3 "http://www.farnell.com/datasheets/1716708.pdf" H 8890 2010 30  0001 C CNN
+F 4 "Farnell" H 8890 2010 60  0001 C CNN "Supplier 1"
+F 5 "2073624" H 8890 2010 60  0001 C CNN "Supplier 1 P/N"
+F 6 "MULTICOMP" H 8890 2010 60  0001 C CNN "Producer"
+F 7 "MCMR08X1200FTL" H 8890 2010 60  0001 C CNN "Producer P/N"
+F 8 "RESISTOR, 0805, 120R, 1%, ANTI SULFUR" H 8890 2010 60  0001 C CNN "Descriprion"
+	1    8890 2010
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R15
+U 1 1 542E7683
+P 8990 2860
+F 0 "R15" V 9090 2960 40  0000 C CNN
+F 1 "1k2" V 8997 2861 40  0000 C CNN
+F 2 "~" V 8920 2860 30  0000 C CNN
+F 3 "http://www.farnell.com/datasheets/1851687.pdf" H 8990 2860 30  0001 C CNN
+F 4 "Farnell" H 8990 2860 60  0001 C CNN "Supplier 1"
+F 5 "1100315" H 8990 2860 60  0001 C CNN "Supplier 1 P/N"
+F 6 "WELWYN" H 8990 2860 60  0001 C CNN "Producer"
+F 7 "WCR0805-1K2FI" H 8990 2860 60  0001 C CNN "Producer P/N"
+F 8 "WELWYN  WCR0805-1K2FI  RESISTORE, 0805 1K2" H 8990 2860 60  0001 C CNN "Descriprion"
+	1    8990 2860
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

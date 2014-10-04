@@ -1,0 +1,16 @@
+#	 cost	range	 time [µs]
+USB	  0.5	  5.0	  500   10
+SL	  0.5	100.0	  300   10
+RF	  2.0	 30.0	 1800   80
+PL	 30.0	 50.0	25000 1300
+
+# cost function explanation:
+# Let 'a' be the per-hop cost, and 'r' the range.
+# The cost function 'c(x)' at a distance 'x' is:
+#
+# c(x) = a * (1 + 2 * (x / r)²)
+#
+# so that c(r) = 2 * c(r / 2)
+# i.e., the range is the distance above which
+# an intermediate hop is sought for.
+

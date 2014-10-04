@@ -1,0 +1,177 @@
+Protocollo TCP per il controllo del master ToLHnet
+
+Il protocollo è testuale, la codifica UTF-8, i comandi sono linee singole terminate dal carattere CR.
+Le risposte sono anch'esse basate su linee, ma un comando ne può generare più di una.
+Le linee delle risposte sono terminate dalla sequenza CR+LF.
+Il protocollo è half-duplex: dopo ogni comando bisogna attendere la risposta prima di impartire il comando successivo,
+la violazione di questo vincolo comporta la chiusura della connessione da parte del demone.
+I numeri sono espressi in esadecimale.
+
+I comandi inviati iniziano con un carattere che ne determinano il tipo:
+ $	invio di un pacchetto di tipo application (SET/GET/MSG)
+ +	invio di un pacchetto al livello network  (SET/GET/MSG)
+ !	invio di una richiesta PING  al livello network
+ ?	invio di una richiesta TRACE al livello network
+ ~	invio di un comando all'interprete comandi
+Anche le risposte ricevute iniziano con un carattere che ne determina il tipo:
+ :	risposta ad un comando che ha previsto l'invio di pacchetti ('$', '+', '!', '?')
+ *	risposta ad un comando '~' locale, usata come terminatore
+Inoltre è possibile che dalla rete arrivino messaggi indirizzati al master
+(solo MSG, non GET o SET, i SET e GET vengono automaticamente NACKed dal demone)
+questi sono inviati in modo asincrono (possono cioè interporsi fra un comando e la sua risposta):
+ #	messaggio dalla rete verso il master.
+I caratteri sono scelti in modo che, nei log o negli esempi,
+sia possibile concatenare le risposte e i comandi su una sola riga senza rischio di ambiguità.
+
+Per quanto riguarda i comandi inviati via rete,
+i comandi SET/GET/MSG prevedono sempre una risposta di tipo ACK/NACK.
+L'ACK è seguito immediatamente dal payload, se c'è un payload.
+I comandi possono specificare un'opzione che indica il massimo numero di byte di risposta che ci si attende nel payload dell'ACK.
+In caso di SET l'ACK è seguito eventualmente dal tempo stimato di esecuzione del comando (polling interval).
+Il NACK è seguito opzionalmente da un codice d'errore e poi eventualmente da un parametro del codice d'errore, non deve avere altro payload.
+I comandi SET/GET/MSG specificano un numero di registro a 64 bit su cui operare (nel caso di MSG sarebbe il tipo di evento segnalato).
+Il numero di registro utilizza una codifica compressa in modo da non sprecare payload se i registri sono pochi.
+Se il registro non è implementato, si ritorna semplicemente un NACK senza specificare la ragione.
+Se il registro è implementato, i NACK dovrebbero sempre includere la ragione.
+
+Esempio relativo ad un bridge I²C:
+ $0N4 79 ? A4 12 34 {08} : 05DB3C04050607
+se il registro 79 è il registro dati di un bridge I²C,
+che si trova nel nodo "0N4",
+legge 8 bytes a partire dall'indirizzo 1234 dell'EEPROM 52,
+e torna un ACK con gli 8 byte letti come payload.
+Se ci sono degli errori, potrebbe tornare qualcosa di questo tipo:
+ ': -EINVAL' se i parametri non sono corretti (indirizzo I²C non valido, lunghezza non valida, ...)
+ ': -EBUSY' se il bus non è idle (e.g. arbitration lost, linee non pull-uppate, etc...)
+ ': -ENODEV' se lo slave non acknowledga il suo indirizzo.
+ ': -ETIMEOUT 02' se la trasmissione I²C va in timeout, il parametro indicherebbe il numero di bytes correttamente trasferiti prima del verificarsi dell'errore.
+Notare che il payload inizia con l'indirizzo I²C dello slave (7 bit, allineati a sinistra, l'ultimo bit deve essere 0 per la SET ed è ignorato (messo a 1 nel fw) per la GET).
+La GET deve avere nel payload i byte da trasmettere prima di fare la lettura.
+Altri esempi di comandi:
+ $N81 1234 = 43
+ $0N4 000002
+ $N92 45 = 12 34 ? {4}
+se il registro 45 c'è la prima set torna un ACK seguita dal polling interval, poi si fa la get.
+Se la get è fatta troppo presto torna -EAGAIN con eventualmente la nuova stima del polling interval.
+Se è fatta troppo tardi o prima della set torna -ENODATA.
+
+
+Possibili risposte ed errori per i comandi '$', '+', '!', '?':
+ ': ~EINVAL'	unable to parse command (syntax error)
+ ': ~ENODEV'	specified node does not exist
+ ': ~ENONET'	specified node cannot be reached (router down)
+ ': ~EPROTO'	protocol error (request received before sending back answer to previous request)
+ ': ~EBUSY'	network is busy (processing command from other source)
+ ': ~EIO'	communication error while sending command
+ ': ~ETIMEOUT'	node did not respond in time, command discarded, status unknown.
+ ': -E<CODE> [parameter]' in caso di NACK, ': -' se il NACK non ha payload
+ ': [payload]' oppure ': OK' se non c'è payload, in caso di ACK
+
+Possibili risposte ed errori per i comandi '~':
+ <testo libero formattato secondo il comando>
+ '*'		(terminatore della risposta)
+ '*ERROR'	unknown command
+ '*EINVAL'	unable to parse command (syntax error)
+ '*ENOLINK'	cannot execute command because link is down
+ '*ENODEV'	specified node does not exist
+ '*ENOSYS'	command not implemented
+ '*EFAIL'	command execution failed
+
+Possibili notifiche provenienti dalla rete:
+ '# +HELLO ....'	collegamento logico appena instaurato, ....='(TOLHNET-1.0 <servername>)'
+ '# ~ENOLINK'		collegamento fisico perso
+ '# +CONNECT'		collegamento fisico ripristinato
+ '#Nn [payload]'	pacchetto MSG proveniente dal nodo Nn.
+
+
+Esempio:
+
+~LIST
+0123456789AB@0001 0002 +|A0S N1					<-- il campo '+|A0S' rappresenta lo stato del nodo (sintassi da definire) e quanto tempo è passato dalla sua ultima osservazione (160 secondi)
+0123456789AC@0001 0003 +|A5S N2
+*
+~START [node]
+0123456789AB@0001 0002 (0001/0002) : OK				<-- i numeri tra parentesi sono un contatore progressivo e il totale di nodi da configurare (per progress bar?)
+0123456789AC@0001 0003 (0002/0002) : ~ETIMEOUT @0001		<-- @numero del comando dopo il config (che ha numero 0000) che ha causato l'errore.
+*EFAIL
+~STOP [node]
+*ENOSYS
+~HELP
+LIST | START | STOP | HELP | QUIT
+*
+$N2 04 = 1234
+: OK
+#N1 0001
+~?
+# +CONNECT
+*
+~QUIT
+*
+The connection is closed!
+
+
+
+Esempio di file di configurazione:
+
+ABCDEF000001@0000	0001	N1
+    0002/F	B	# PL1
+    0010-0019	C	# RF1
+    0020/B	C	# RF2 & PL2
+    $ 0102030405060708 = ABCD $: "Ciao, \"questa\" è una \\stringa\\!\r\n" [10]
+    $ 012345678 ? [1000]			# legge (GET) il registro con timeout.
+    $ 0123456789ABCDEF ? 00 02 {4} > R3		# legge (GET) max 4 bytes dal registro e lo mette su R3.
+    $ ABCD = 12 34 ? {8} [20]			# scrive (SET) e poi legge (GET) max 8 bytes
+    + 11 = 0F 1B24FA				# SET diretta al network layer
+    ~ [A0]					# attende 160 qualcosa-secondi
+    $ 00 : "message"				# invia un MSG
+    $ 12 = 00 (R3) FF				# ripesca da R3 il valore da inviare
+    !						# ping (no payload)
+    ! AB CD					# ping (payload ABCD)
+    ! {10}					# ping (sixteen bytes of payload)
+    ?						# trace (full)
+    ? {2}					# trace (last two hops only)
+ABCDEF000002@0001	0002	N2
+ABCDEF000003@0001	0003	N3
+ABCDEF000004@0001	0014	N4
+ABCDEF000005@0001	0015	N5
+ABCDEF000006@0001	0016	N6
+    0020/B	C	# RF2 & PL2
+ABCDEF000007@0002	0027	N7
+    0039	B	# PL2
+ABCDEF000008@0002	0028	N8
+ABCDEF000009@0003	0039	N9
+$N6 1234 = "Prova."
+?N3
++N2 12 ?
+
+
+****************************************
+
+Feature che *non* saranno implementate:
+ - memorizzazione/richiamo di registri locali nei comandi (con sintassi tipo '> R3' e '(R3)').
+ - SET e GET combinate nello stesso comando
+
+
+Codifica dei comandi nel layer di rete:
+
+application-layer specific codes:
+ dots (...) represent the payload, points (··) represent the register number
+  v------ extra value (e.g. timeout, [t]) present
+000 ACK 	..........
+001 NACK
+010 GET 	$ ·· ? ...
+011 GETt	$ ·· ? ... [t]
+100 MSG 	$ ·· : ...
+101 GETtn	$ ·· ? ... [t] {n}
+110 SET 	$ ·· = ...
+111 SETt	$ ·· = ... [t]
+network-layer specific codes:
+000 ACK
+001 NACK
+010 GET 	+ ·· ? ...
+011 TRACE	? {n}
+100 MSG 	+ ·· : ...
+101 PING	! {n}
+110 SET 	+ ·· = ...
+111 CONFIG
+

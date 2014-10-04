@@ -1,0 +1,112 @@
+* Demo board:
+
+ - Tiva™ C Series TM4C123G LaunchPad Evaluation Board (EK-TM4C123GXL)
+ - µC: ARM® Cortex™-M4F TM4C123GH6PMI (80 MHz, 256 KiB Flash, 32 KiB SRAM, ROM, 2 KiB EEPROM)
+
+* Expansion board:
+
+ - Power supply:
+   +5V (preferred supply) from demo-board USB connectors, or
+   +12V through TPS62160 (disabled when +5V present).
+
+ - UART1 connections to external serial port through 3×2 pin male header:
+   1: UART RTS
+   2: GND
+   3: UART TX
+   4: UART CTS
+   5: UART RX
+   6: VDD (3.3V)
+
+ - UART2 connections to PLC modem (ST7580) through 3×2 pin male header:
+   1: GPIO TREQ   (µC -> PLC)
+   2: GND
+   3: UART TX     (µC -> PLC)
+   4: GPIO RESET# (µC -> PLC)
+   5: UART RX     (µC <- PLC)
+   6: VDD (3.3V)
+
+ - UART3 connections to on-board 3.3 V 10 Mbps RS-485 transceiver (SN65HVD11):
+   1: UART RX
+   2: GPIO RXEN#
+   3: GPIO TXEN
+   4: UART TX
+   5: GND
+   6: --> RS-485 A
+   7: --> RS-485 B
+   8: VDD
+
+ - CAN0  connections to on-board 3.3 V 1 Mbps CAN transceiver (SN65HVD234):
+   1: CAN TX
+   2: GND
+   3: VDD
+   4: CAN RX
+   5: GPIO EN
+   6: --> CAN L
+   7: --> CAN H
+   8: GPIO Rs
+
+ - SSI0  connections to on-board radio module (RFM23B):
+   - SPI  MISO
+   - SPI  MOSI
+   - SPI  SCLK
+   - SPI  SSEL
+   - GPIO SDN  (µC -> RFM)
+   - GPIO CLK  (µC <- RFM GPIO2)
+   - INT  NIRQ (µC <- RFM)
+
+ - spare functions:
+   - 2 × I²C buses (or 1 × I²C and 2 × PWM outputs)
+   - 2 × analog inputs
+   - 2 × GPIOs from RFM module
+
+* Demo board pinout usage:
+
+J1.01	+3.3 V
+J1.02	PB5		GPIO	(PLC TREQ)
+J1.03	PB0		U1RX	(external serial port)		DMA 22	F0
+J1.04	PB1		U1TX	(external serial port)		DMA 23  F0
+J1.05	PE4		CAN0RX
+J1.06	PE5		CAN0TX
+J1.07	PB4		GPIO	(RFM SDN)
+J1.08	PA5		SSI0TX	(RFM SPI [MOSI])		DMA 11	F0
+J1.09	PA6		I2C1SCL
+J1.10	PA7		I2C1SDA
+
+J2.01	GND
+J2.02	PB2		I2C0SCL
+J2.03	PE0		GPIO	(RFM NIRQ)
+J2.04	PF0=SW2
+J2.05	RESET
+J2.06	PB7 (=PD1@R10)	GPIO	(CAN EN)
+J2.07	PB6 (=PD0@R9)	GPIO	(CAN Rs)
+J2.08	PA4		SSI0RX	(RFM SPI [MISO])		DMA 10	F0
+J2.09	PA3		SSI0FSS	(RFM SPI [SSEL])
+J2.10	PA2		SSI0CLK	(RFM SPI [SCLK])
+
+J3.01	+5.0 V
+J3.02	GND
+J3.03	PD0 (=PB6@R9)	GPIO	(RFM CLK [GPIO2])
+J3.04	PD1 (=PB7@R10)  GPIO	(PLC RESET#)
+J3.05	PD2		GPIO	(RS-485 RXEN#)
+J3.06	PD3		GPIO	(RS-485 TXEN)
+J3.07	PE1		AIN2	(resistor divider to monitor +12V rail)
+J3.08	PE2		AIN1
+J3.09	PE3		AIN0
+J3.10	PF1=LED R
+
+J4.01	PF2=LED B
+J4.02	PF3=LED G
+J4.03	PB3		I2C0SDA
+J4.04	PC4		U1RTS	(external serial port)
+J4.05	PC5		U1CTS	(external serial port)
+J4.06	PC6		U3RX	(RS-485)			DMA 16	F2
+J4.07	PC7		U3TX	(RS-485)			DMA 17	F2
+J4.08	PD6		U2RX	(PLC TX)			DMA 12	F1
+J4.09	PD7		U2TX	(PLC RX)			DMA 13	F1
+J4.10	PF4=SW1
+
+-----	PA0		U0RX	(on-board ICDI)			DMA 8   F0
+-----	PA1		U0TX	(on-board ICDI)			DMA 9   F0
+-----	PC0-PC3		JTAG	(on-board ICDI)
+-----	PD4-PD5		USB
+
