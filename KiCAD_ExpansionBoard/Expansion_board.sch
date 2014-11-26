@@ -45,7 +45,7 @@ encoding utf-8
 Sheet 2 3
 Title "TM4C123G Communication Expansion Board"
 Date "3 oct 2014"
-Rev "1.0"
+Rev "1.1"
 Comp "Luca Buccolini, Student @ Università Politecnica delle Marche"
 Comment1 "Expansion Board for the Texas Instruments TM4C123G Launchpad "
 Comment2 ""
