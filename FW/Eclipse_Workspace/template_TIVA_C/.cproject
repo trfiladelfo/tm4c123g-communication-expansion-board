@@ -32,8 +32,8 @@
 								<option id="gnu.c.compiler.option.include.paths.1360407383" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="/home/luca/src/stellaris/Tivaware"/>
 								</option>
-								<option id="gnu.c.compiler.option.misc.other.1973706604" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-c -fmessage-length=0 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -ffunction-sections -fdata-sections -mlittle-endian -Wno-missing-field-initializers -std=c99 -g -flto -fno-builtin " valueType="string"/>
-								<option id="gnu.c.compiler.option.warnings.extrawarn.1387074734" name="Extra warnings (-Wextra)" superClass="gnu.c.compiler.option.warnings.extrawarn" value="true" valueType="boolean"/>
+								<option id="gnu.c.compiler.option.misc.other.1973706604" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wextra -c -fmessage-length=0 -mcpu=cortex-m4 -mthumb -mlittle-endian -Wall -Wextra -Wno-missing-field-initializers -std=c99 -g -ffunction-sections -flto -fno-builtin -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -fdata-sections" valueType="string"/>
+								<option id="gnu.c.compiler.option.warnings.extrawarn.1387074734" name="Extra warnings (-Wextra)" superClass="gnu.c.compiler.option.warnings.extrawarn" value="false" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.850356634" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1898375204" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
@@ -47,7 +47,8 @@
 								<option id="gnu.c.link.option.paths.840300981" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="/home/luca/src/stellaris/Tivaware/driverlib/gcc"/>
 								</option>
-								<option id="gnu.c.link.option.ldflags.1747694980" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="-static -Wl,--gc-sections -flto -Wl,--entry=ResetISR -nostartfiles -T../tm4c123gh6pm.ld" valueType="string"/>
+								<option id="gnu.c.link.option.ldflags.1747694980" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="-Wl,--static,--gc-sections,-T../tm4c123gh6pm.ld -mthumb -mcpu=cortex-m4 -Wl,--entry=ResetISR" valueType="string"/>
+								<option id="gnu.c.link.option.nostart.869585006" name="Do not use standard start files (-nostartfiles)" superClass="gnu.c.link.option.nostart" value="true" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.273790319" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -159,5 +160,12 @@
 			</profile>
 		</scannerConfigBuildInfo>
 	</storageModule>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/template_TIVA_C"/>
+		</configuration>
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/template_TIVA_C"/>
+		</configuration>
+	</storageModule>
 </cproject>
