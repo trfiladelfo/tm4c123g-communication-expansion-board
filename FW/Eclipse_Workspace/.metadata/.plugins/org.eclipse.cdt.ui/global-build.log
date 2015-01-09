@@ -1,27 +1,12 @@
-13:08:06 **** Build of configuration Debug for project template_TIVA_C ****
+17:08:14 **** Incremental Build of configuration Debug for project template_TIVA_C ****
 make all 
-Building file: ../main.c
-Invoking: Cross GCC Compiler
-arm-none-eabi-gcc -DPART_TH4C123GH6PM -D__ASSEMBLY__ -DTARGET_IS_TM4C123_RB1 -DARM_MATH_CM4 -I/home/luca/src/stellaris/Tivaware -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -ffunction-sections -fdata-sections -mlittle-endian -Wno-missing-field-initializers -std=c99 -g -flto -fno-builtin -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building file: ../startup_gcc.c
-Invoking: Cross GCC Compiler
-arm-none-eabi-gcc -DPART_TH4C123GH6PM -D__ASSEMBLY__ -DTARGET_IS_TM4C123_RB1 -DARM_MATH_CM4 -I/home/luca/src/stellaris/Tivaware -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -ffunction-sections -fdata-sections -mlittle-endian -Wno-missing-field-initializers -std=c99 -g -flto -fno-builtin -MMD -MP -MF"startup_gcc.d" -MT"startup_gcc.d" -o "startup_gcc.o" "../startup_gcc.c"
-Finished building: ../startup_gcc.c
- 
-Building target: template_TIVA_C.elf
-Invoking: Cross GCC Linker
-arm-none-eabi-gcc -L/home/luca/src/stellaris/Tivaware/driverlib/gcc -static -Wl,--gc-sections -flto -Wl,--entry=ResetISR -nostartfiles -T../tm4c123gh6pm.ld -o "template_TIVA_C.elf"  ./main.o ./startup_gcc.o   -ldriver
-Finished building target: template_TIVA_C.elf
- 
-make --no-print-directory post-build
-Generate binary file from elf file
-arm-none-eabi-objcopy -O binary template_TIVA_C.elf template_TIVA_C.bin
- 
+make: Nothing to be done for `all'.
 
-13:08:07 Build Finished (took 260ms)
+17:08:14 Build Finished (took 68ms)
 
-13:08:15 **** Incremental Build of configuration Debug for project template_TIVA_C ****
+17:08:23 **** Incremental Build of configuration Debug for project template_TIVA_C ****
+make all 
+make: Nothing to be done for `all'.
+17:08:23 **** Incremental Build of configuration Debug for project template_TIVA_C ****
 make all 
 make: Nothing to be done for `all'.

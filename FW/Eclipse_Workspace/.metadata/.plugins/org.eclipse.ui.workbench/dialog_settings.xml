@@ -20,6 +20,13 @@
 		<item value="743" key="DIALOG_HEIGHT"/>
 		<item value="1|Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
+	<section name="ZipFileExportWizard">
+		<item value="true" key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID"/>
+		<item value="true" key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID"/>
+		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/home/luca/Dropbox/Progettazione di Sistemi Embedded/PSE_Project/FW/template_TIVA_C_Eclipse/template_TIVA_C_FullyWorking.zip"/>
+		</list>
+	</section>
 	<section name="ShowViewDialog">
 		<item value="345" key="DIALOG_WIDTH"/>
 		<item value="org.eclipse.cdt.embsysregview.views.EmbSysRegView" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
@@ -40,7 +47,7 @@
 	</section>
 	<section name="ImportExportAction">
 		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
-		<item value="org.eclipse.ui.wizards.export.FileSystem" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>
+		<item value="org.eclipse.ui.wizards.export.ZipFile" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
 		</list>

@@ -1,6 +1,6 @@
-12:26:46 **** Incremental Build of configuration Debug for project GPIO_example ****
+17:01:01 **** Incremental Build of configuration Debug for project GPIO_example ****
 make all 
 make: Nothing to be done for `all'.
 
-12:26:46 Build Finished (took 63ms)
+17:01:01 Build Finished (took 60ms)
 

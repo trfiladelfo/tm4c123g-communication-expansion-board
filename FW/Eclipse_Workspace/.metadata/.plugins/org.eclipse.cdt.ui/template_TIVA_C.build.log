@@ -1,6 +1,6 @@
-13:08:15 **** Incremental Build of configuration Debug for project template_TIVA_C ****
+17:08:23 **** Incremental Build of configuration Debug for project template_TIVA_C ****
 make all 
 make: Nothing to be done for `all'.
 
-13:08:15 Build Finished (took 62ms)
+17:08:23 Build Finished (took 66ms)
 

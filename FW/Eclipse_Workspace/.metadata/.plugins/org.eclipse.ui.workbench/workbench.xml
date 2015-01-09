@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="15" version="2.0">
+<workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="0" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -19,7 +19,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="256" y="36"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -32,13 +32,18 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="/home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/template_TIVA_C/main.c" title="main.c" tooltip="template_TIVA_C/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/template_TIVA_C/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="622" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="911" selectionTopPixel="370"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="previous_flags" partName="previous_flags" path="/home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/template_TIVA_C/previous_flags" title="previous_flags" tooltip="template_TIVA_C/previous_flags" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/template_TIVA_C/previous_flags"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="552" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -52,7 +57,9 @@
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
 <viewState/>
 </view>
-<view id="org.eclipse.cdt.debug.ui.executablesView" partName="Executables"/>
+<view id="org.eclipse.cdt.debug.ui.executablesView" partName="Executables">
+<viewState/>
+</view>
 <view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
 <viewState/>
 </view>
@@ -84,10 +91,7 @@
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings (2 items)"/>
-</expanded>
-<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="1064" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -99,7 +103,9 @@
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
 </view>
-<view id="org.eclipse.cdt.embsysregview.views.EmbSysRegView" partName="EmbSys Registers"/>
+<view id="org.eclipse.cdt.embsysregview.views.EmbSysRegView" partName="EmbSys Registers">
+<viewState/>
+</view>
 <view id="org.eclipse.cdt.dsf.debug.ui.disassembly.view" partName="Disassembly">
 <viewState disassembly.syncActiveContext="true" disassembly.trackExpression="false"/>
 </view>
@@ -402,10 +408,51 @@
 <workingSets/>
 <navigationHistory>
 <editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GPIO_example/main.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/template_TIVA_C/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/template_TIVA_C/previous_flags"/>
 </editors>
-<item active="true" historyLabel="main.c" index="0">
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="911" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="1005" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="855" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="911" y="0"/>
+</item>
+<item historyLabel="previous_flags" index="2">
+<position info="not_deleted" x="665" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="911" y="0"/>
+</item>
+<item historyLabel="previous_flags" index="2">
+<position info="not_deleted" x="502" y="162"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="773" y="58"/>
+</item>
+<item historyLabel="previous_flags" index="2">
+<position info="not_deleted" x="552" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="684" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="911" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="911" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="684" y="0"/>
+</item>
+<item active="true" historyLabel="main.c" index="1">
+<position info="not_deleted" x="684" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -424,8 +471,14 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="previous_flags" tooltip="template_TIVA_C/previous_flags">
+<persistable path="/template_TIVA_C/previous_flags"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="template_TIVA_C/main.c">
 <persistable path="/template_TIVA_C/main.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="GPIO_example/main.c">
+<persistable path="/GPIO_example/main.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_gcc.c" tooltip="template_TIVA_C/startup_gcc.c">
 <persistable path="/template_TIVA_C/startup_gcc.c"/>
@@ -435,9 +488,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="tm4c123gh6pm.ld" tooltip="template_TIVA_C/tm4c123gh6pm.ld">
 <persistable path="/template_TIVA_C/tm4c123gh6pm.ld"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="GPIO_example/main.c">
-<persistable path="/GPIO_example/main.c"/>
 </file>
 </mruList>
 </workbench>
