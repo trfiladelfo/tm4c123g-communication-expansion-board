@@ -28,7 +28,7 @@ all: template_TIVA_C.elf
 template_TIVA_C.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross GCC Linker'
-	arm-none-eabi-gcc -L/home/luca/src/stellaris/Tivaware/driverlib/gcc -Wl,--static,--gc-sections,-T../TM4C.ld -mthumb -mcpu=cortex-m4 -o "template_TIVA_C.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -L/home/luca/src/stellaris/Tivaware/driverlib/gcc -static -Wl,--gc-sections -flto -Wl,--entry=ResetISR -nostartfiles -T../tm4c123gh6pm.ld -o "template_TIVA_C.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build

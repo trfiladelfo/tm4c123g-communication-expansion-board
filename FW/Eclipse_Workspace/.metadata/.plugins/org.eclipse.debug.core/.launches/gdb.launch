@@ -32,12 +32,12 @@
 <booleanAttribute key="org.eclipse.cdt.dsf.gdb.UPDATE_THREADLIST_ON_SUSPEND" value="false"/>
 <intAttribute key="org.eclipse.cdt.launch.ATTR_BUILD_BEFORE_LAUNCH_ATTR" value="2"/>
 <stringAttribute key="org.eclipse.cdt.launch.COREFILE_PATH" value=""/>
-<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Debug/GPIO_example.elf"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="GPIO_example"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="/home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/template_TIVA_C/Debug/template_TIVA_C.elf"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="template_TIVA_C"/>
 <booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="true"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="cdt.managedbuild.config.gnu.cross.exe.debug.535231408"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/GPIO_example"/>
+<listEntry value="/template_TIVA_C"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="4"/>
