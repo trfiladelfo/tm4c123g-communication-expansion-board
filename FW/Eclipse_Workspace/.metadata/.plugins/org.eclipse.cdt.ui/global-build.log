@@ -1,12 +1,21 @@
-17:08:14 **** Incremental Build of configuration Debug for project template_TIVA_C ****
+20:06:25 **** Incremental Build of configuration Debug for project CAN_drv_example ****
 make all 
-make: Nothing to be done for `all'.
-
-17:08:14 Build Finished (took 68ms)
-
-17:08:23 **** Incremental Build of configuration Debug for project template_TIVA_C ****
-make all 
-make: Nothing to be done for `all'.
-17:08:23 **** Incremental Build of configuration Debug for project template_TIVA_C ****
-make all 
-make: Nothing to be done for `all'.
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+arm-none-eabi-gcc -DPART_TH4C123GH6PM -D__ASSEMBLY__ -DTARGET_IS_TM4C123_RB1 -DARM_MATH_CM4 -I/home/luca/src/stellaris/Tivaware -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -mcpu=cortex-m4 -mthumb -mlittle-endian -Wall -Wextra -Wno-missing-field-initializers -std=c99 -g -ffunction-sections -flto -fno-builtin -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../startup_gcc.c
+Invoking: Cross GCC Compiler
+arm-none-eabi-gcc -DPART_TH4C123GH6PM -D__ASSEMBLY__ -DTARGET_IS_TM4C123_RB1 -DARM_MATH_CM4 -I/home/luca/src/stellaris/Tivaware -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -mcpu=cortex-m4 -mthumb -mlittle-endian -Wall -Wextra -Wno-missing-field-initializers -std=c99 -g -ffunction-sections -flto -fno-builtin -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -fdata-sections -MMD -MP -MF"startup_gcc.d" -MT"startup_gcc.d" -o "startup_gcc.o" "../startup_gcc.c"
+Finished building: ../startup_gcc.c
+ 
+Building target: CAN_drv_example.elf
+Invoking: Cross GCC Linker
+arm-none-eabi-gcc -nostartfiles -L/home/luca/src/stellaris/Tivaware/driverlib/gcc -Wl,--static,--gc-sections,-T../tm4c123gh6pm.ld -mthumb -mcpu=cortex-m4 -Wl,--entry=ResetISR -o "CAN_drv_example.elf"  ./main.o ./startup_gcc.o   -ldriver
+Finished building target: CAN_drv_example.elf
+ 
+make --no-print-directory post-build
+Generate binary file from elf file
+arm-none-eabi-objcopy -O binary CAN_drv_example.elf CAN_drv_example.bin
+ 
