@@ -1,123 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="20" version="2.0">
-<workbenchAdvisor/>
-<window height="766" maximized="true" width="1024" x="148" y="101">
-<fastViewData fastViewLocation="1024"/>
-<perspectiveBar>
-<itemSize x="160"/>
-</perspectiveBar>
-<coolbarLayout>
-<coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="306" y="36"/>
-<coolItem id="additions" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="226" y="36"/>
-<coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="174" y="36"/>
-<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="48" y="36"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="100" y="36"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="108" y="36"/>
-<coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="256" y="36"/>
-<coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="group.help" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
-</coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1420022705075" focus="true" label="Workspace - C/C++">
+<workbench version="2.0">
+<window>
+<page focus="true" label="Workspace - C/C++">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="/home/luca/src/stellaris/Eclipse_prj/GPIO_example/main.c" title="main.c" tooltip="GPIO_example/main.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GPIO_example/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="629" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="app_can.c" partName="app_can.c" path="/home/luca/src/stellaris/Eclipse_prj/template/app_can.c" title="app_can.c" tooltip="template/app_can.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/template/app_can.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="951" selectionTopPixel="0"/>
-</editor>
 </editors>
 <views>
-<view id="org.eclipse.debug.ui.ModuleView" partName="Modules">
-<viewState/>
-</view>
-<view id="org.eclipse.debug.ui.MemoryView" partName="Memory">
-<viewState/>
-</view>
-<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
-<viewState isPinned="false">
-<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
-</viewState>
-</view>
-<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
-<viewState/>
-</view>
-<view id="org.eclipse.cdt.debug.ui.executablesView" partName="Executables">
-<viewState/>
-</view>
-<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
-<viewState/>
-</view>
-<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
-<viewState/>
-</view>
-<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
-<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
-<columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="300" org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="994" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.priorityField="30" org.eclipse.ui.ide.resourceField="90"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
-</viewState>
-</view>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
-<viewState/>
-</view>
-<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
-<viewState CommonNavigator.LINKING_ENABLED="1" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
-</view>
-<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
-<viewState/>
-</view>
-<view id="org.eclipse.debug.ui.RegisterView" partName="Registers">
-<viewState/>
-</view>
-<view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target">
-<viewState/>
-</view>
-<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
-<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.resourceField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="1064" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="197" org.eclipse.ui.ide.severityAndDescriptionField="447"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
-</viewState>
-</view>
-<view id="org.eclipse.cdt.ui.callHierarchy" partName="Call Hierarchy">
-<viewState showFilesInLabels="false" variableFilter="false"/>
-</view>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
-<viewState/>
-</view>
-<view id="org.eclipse.cdt.embsysregview.views.EmbSysRegView" partName="EmbSys Registers">
-<viewState/>
-</view>
-<view id="org.eclipse.cdt.dsf.debug.ui.disassembly.view" partName="Disassembly">
-<viewState disassembly.syncActiveContext="true" disassembly.trackExpression="false"/>
-</view>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer"/>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems"/>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console"/>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
+<view id="org.eclipse.cdt.ui.callHierarchy" partName="Call Hierarchy"/>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search"/>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline"/>
+<view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
 </views>
 <perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
@@ -398,98 +301,7 @@
 </layout>
 </perspective>
 </perspectives>
-<workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/template_TIVA_C/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GPIO_example/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/template/app_can.c"/>
-</editors>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="568" y="0"/>
-</item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="670" y="0"/>
-</item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="568" y="0"/>
-</item>
-<item historyLabel="app_can.c" index="2">
-<position info="not_deleted" x="3" y="0"/>
-</item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="568" y="0"/>
-</item>
-<item historyLabel="app_can.c" index="2">
-<position info="not_deleted" x="933" y="0"/>
-</item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="629" y="0"/>
-</item>
-<item active="true" historyLabel="app_can.c" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
-<workbenchWindowAdvisor/>
-<actionBarAdvisor/>
-<trimLayout>
-<trimArea IMemento.internal.id="128">
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
-</trimArea>
-<trimArea IMemento.internal.id="1024">
-<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
-<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-</trimArea>
-</trimLayout>
 </window>
-<mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="app_can.c" tooltip="template/app_can.c">
-<persistable path="/template/app_can.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="GPIO_example/main.c">
-<persistable path="/GPIO_example/main.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="template/main.c">
-<persistable path="/template/main.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_gcc.c" tooltip="template/startup_gcc.c">
-<persistable path="/template/startup_gcc.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="app_can.h" tooltip="template/app_can.h">
-<persistable path="/template/app_can.h"/>
-</file>
-<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="sysctl.h" tooltip="/home/luca/src/stellaris/Tivaware/driverlib/sysctl.h">
-<persistable path="/home/luca/src/stellaris/Tivaware/driverlib/sysctl.h" project="template"/>
-</file>
-<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="gpio.h" tooltip="/home/luca/src/stellaris/Tivaware/driverlib/gpio.h">
-<persistable path="/home/luca/src/stellaris/Tivaware/driverlib/gpio.h" project="template"/>
-</file>
-<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="hw_memmap.h" tooltip="/home/luca/src/stellaris/Tivaware/inc/hw_memmap.h">
-<persistable path="/home/luca/src/stellaris/Tivaware/inc/hw_memmap.h" project="template"/>
-</file>
-<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stdio.h" tooltip="/usr/arm-none-eabi/include/stdio.h">
-<persistable path="/usr/arm-none-eabi/include/stdio.h" project="CAN_drv_development"/>
-</file>
-<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="hw_comp.h" tooltip="/home/luca/src/stellaris/Tivaware/inc/hw_comp.h">
-<persistable path="/home/luca/src/stellaris/Tivaware/inc/hw_comp.h" project="CAN_drv_development"/>
-</file>
-<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm4c123gh6pm.h" tooltip="/home/luca/src/stellaris/Tivaware/inc/tm4c123gh6pm.h">
-<persistable path="/home/luca/src/stellaris/Tivaware/inc/tm4c123gh6pm.h" project="CAN_drv_development"/>
-</file>
-<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stdlib.h" tooltip="/usr/arm-none-eabi/include/stdlib.h">
-<persistable path="/usr/arm-none-eabi/include/stdlib.h" project="CAN_drv_development"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="app_can.c" tooltip="CAN_drv_development/app_can.c">
-<persistable path="/CAN_drv_development/app_can.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="app_can.h" tooltip="CAN_drv_development/app_can.h">
-<persistable path="/CAN_drv_development/app_can.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_gcc.c" tooltip="CAN_drv_development/startup_gcc.c">
-<persistable path="/CAN_drv_development/startup_gcc.c"/>
-</file>
-</mruList>
 </workbench>

@@ -1,4 +1,4 @@
-11:30:49 **** Build of configuration Debug for project GPIO_example ****
+12:26:44 **** Build of configuration Debug for project GPIO_example ****
 make all 
 Building file: ../main.c
 Invoking: Cross GCC Compiler
@@ -19,18 +19,12 @@ make --no-print-directory post-build
 Generate binary file from elf file
 arm-none-eabi-objcopy -O binary GPIO_example.elf GPIO_example.bin
  
-11:32:13 **** Incremental Build of configuration Debug for project GPIO_example ****
+
+12:26:44 Build Finished (took 213ms)
+
+12:26:46 **** Incremental Build of configuration Debug for project GPIO_example ****
 make all 
 make: Nothing to be done for `all'.
-11:40:44 **** Incremental Build of configuration Debug for project GPIO_example ****
-make all 
-make: Nothing to be done for `all'.
-11:42:02 **** Incremental Build of configuration Debug for project GPIO_example ****
-make all 
-make: Nothing to be done for `all'.
-11:42:03 **** Incremental Build of configuration Debug for project template ****
-make all 
-make: Nothing to be done for `all'.
-11:42:03 **** Incremental Build of configuration Debug for project GPIO_example ****
+12:26:46 **** Incremental Build of configuration Debug for project GPIO_example ****
 make all 
 make: Nothing to be done for `all'.
