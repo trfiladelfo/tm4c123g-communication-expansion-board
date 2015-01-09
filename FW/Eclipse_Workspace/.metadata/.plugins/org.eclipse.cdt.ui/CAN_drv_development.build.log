@@ -1,0 +1,7 @@
+02:17:20 **** Clean-only build of configuration Release for project CAN_drv_development ****
+make clean 
+rm -rf  ./app_can.o ./main.o ./startup_gcc.o  ./app_can.d ./main.d ./startup_gcc.d  CAN_drv_development
+ 
+
+02:17:20 Build Finished (took 62ms)
+

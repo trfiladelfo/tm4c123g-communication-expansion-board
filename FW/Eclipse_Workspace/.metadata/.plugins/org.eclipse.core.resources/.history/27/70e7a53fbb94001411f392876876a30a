@@ -1,0 +1,170 @@
+/*
+ * app_can.c
+ *
+ *  Created on: Dec 31, 2014
+ *      Author: Luca Buccolini
+ *
+ *  Useful document: 	TivaWare Peripheral Driver Library (SW-TM4C-DRL-UG-2.1.0.12573)
+ *  					The paragraph's numbers in following comments are related to this document.
+ *
+ */
+
+#include "app_can.h"
+
+#include <stdbool.h>
+#include <stdint.h>
+
+#include "inc/hw_memmap.h"
+
+#include "driverlib/sysctl.h"
+#include "driverlib/gpio.h"
+#include "driverlib/can.h"
+#include "driverlib/pin_map.h"
+
+
+
+void app_can_init()
+
+SysCtlPeripheralPow
+
+{
+//27.2.2.32 SysCtlPeripheralEnable
+	//Enable the peripherals before work with them
+SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);	//enable GPIO port B
+SysCtlPeripheralEnable(SYSCTL_PERIPH_CAN0);		//enable CAN 0
+
+asm("mov r0,r0");
+asm("mov r0,r0");
+asm("mov r0,r0");
+asm("mov r0,r0");
+asm("mov r0,r0");
+asm("mov r0,r0");
+
+//15.2.3.27 GPIOPinTypeGPIOOutput
+	//Set GPIO PORTB pins 6 and 7 as output, SW controlled.
+	//CAN_RS=PB6, CAN_Enable=PB7
+GPIOPinTypeGPIOOutput(GPIO_PORTB_BASE,GPIO_PIN_6 | GPIO_PIN_7);
+
+//15.2.3.48 GPIOPinWrite
+	//Writes a 0 to pin PB6 (CAN_RS pin of CAN transceiver TI SN65HVD64).
+GPIOPinWrite(GPIO_PORTB_BASE,GPIO_PIN_6,0);		//enable CAN driver slope control through value of RS resistor.
+	/*
+	 * If a high-level input (> 0.75 VCC) is applied to CAN_RS pin (TI SN65HVD64, pin 8), the circuit enters a low-current,
+	 * listen only standby mode during which the driver is switched off and the receiver remains active.
+	 * GPIOPinWrite(GPIO_PORTB_BASE,GPIO_PIN_6,1);		//CAN driver switched off and CAN receiver active
+	 */
+
+GPIOPinWrite(GPIO_PORTB_BASE,GPIO_PIN_7,1);		//enable CAN transceiver
+
+//15.2.3.20 GPIOPinTypeCAN
+	//Configure GPIO Port E pins 4 and 5 to be used as CAN0.
+GPIOPinTypeCAN(GPIO_PORTE_BASE,GPIO_PIN_4 | GPIO_PIN_5);
+
+//15.2.3.17 GPIOPinConfigure
+	//Configures pins for use as a CAN device.
+GPIOPinConfigure(GPIO_PE4_CAN0RX);
+GPIOPinConfigure(GPIO_PE5_CAN0TX);
+
+
+/*
+CANInit(CAN0_BASE);
+
+CANSetBitTiming();
+
+CANEnable();
+
+*/
+
+}
+
+
+
+
+//#include "serial.h"
+//#include "Drivers/uartdma.h"
+//
+//#include <inc/hw_memmap.h>
+//#include <inc/hw_types.h>
+//#include <inc/hw_uart.h>
+//#include "board.h"
+//
+//const char serial_eol[] = "\r\n";
+//
+//static const char hexdigits[] = "0123456789ABCDEF";
+//static char serial_buffer[256];
+//static uint8_t tail;
+//
+//static void serial_flush (void)
+//{
+//	while (uart_send_frame(0, serial_buffer, tail) < 0) {}
+//	tail = 0;
+//}
+//
+//void serial_send (const char *text)
+//{
+//	bool flush = text == serial_eol;
+//	if (text) while (*text) serial_buffer[tail++] = *text++;
+//	if (flush) serial_flush();
+//}
+//
+//void serial_send_h (const uint8_t *data, uint8_t len)
+//{
+//	if (data) while (len--) {
+//		uint8_t val = *data++;
+//		serial_buffer[tail++] = hexdigits[(val >> 4) & 0x0F];
+//		serial_buffer[tail++] = hexdigits[(val >> 0) & 0x0F];
+//	}
+//}
+//
+//void serial_send_16 (const char *prefix, uint16_t val, const char *suffix)
+//{
+//	bool flush = suffix == serial_eol;
+//	if (prefix) while (*prefix) serial_buffer[tail++] = *prefix++;
+//	serial_buffer[tail++] = hexdigits[(val >> 12) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >>  8) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >>  4) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >>  0) & 0x0F];
+//	if (suffix) while (*suffix) serial_buffer[tail++] = *suffix++;
+//	if (flush) serial_flush();
+//}
+//
+//void serial_send_32 (const char *prefix, uint32_t val, const char *suffix)
+//{
+//	bool flush = suffix == serial_eol;
+//	if (prefix) while (*prefix) serial_buffer[tail++] = *prefix++;
+//	serial_buffer[tail++] = hexdigits[(val >> 28) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >> 24) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >> 20) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >> 16) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >> 12) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >>  8) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >>  4) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >>  0) & 0x0F];
+//	if (suffix) while (*suffix) serial_buffer[tail++] = *suffix++;
+//	if (flush) serial_flush();
+//}
+//
+//void serial_send_48 (const char *prefix, uint64_t val, const char *suffix)
+//{
+//	bool flush = suffix == serial_eol;
+//	if (prefix) while (*prefix) serial_buffer[tail++] = *prefix++;
+//	serial_buffer[tail++] = hexdigits[(val >> 44) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >> 40) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >> 36) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >> 32) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >> 28) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >> 24) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >> 20) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >> 16) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >> 12) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >>  8) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >>  4) & 0x0F];
+//	serial_buffer[tail++] = hexdigits[(val >>  0) & 0x0F];
+//	if (suffix) while (*suffix) serial_buffer[tail++] = *suffix++;
+//	if (flush) serial_flush();
+//}
+//
+//void serial_wait (void)
+//{
+//	while (HWREG(BITBAND(UART0_BASE + UART_O_FR, 3)));
+//}

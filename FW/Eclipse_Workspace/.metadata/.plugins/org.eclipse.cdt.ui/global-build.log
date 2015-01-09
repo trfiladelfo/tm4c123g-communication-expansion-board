@@ -1,0 +1,36 @@
+11:30:49 **** Build of configuration Debug for project GPIO_example ****
+make all 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+arm-none-eabi-gcc -DPART_TH4C123GH6PM -DARM_MATH_CM4 -DTARGET_IS_BLIZZARD_RA1 -I/home/luca/src/stellaris/Tivaware -O0 -g3 -Wall -c -fmessage-length=0 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../startup_gcc.c
+Invoking: Cross GCC Compiler
+arm-none-eabi-gcc -DPART_TH4C123GH6PM -DARM_MATH_CM4 -DTARGET_IS_BLIZZARD_RA1 -I/home/luca/src/stellaris/Tivaware -O0 -g3 -Wall -c -fmessage-length=0 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -ffunction-sections -fdata-sections -MMD -MP -MF"startup_gcc.d" -MT"startup_gcc.d" -o "startup_gcc.o" "../startup_gcc.c"
+Finished building: ../startup_gcc.c
+ 
+Building target: GPIO_example.elf
+Invoking: Cross GCC Linker
+arm-none-eabi-gcc -L/home/luca/src/stellaris/Tivaware/driverlib/gcc -Wl,--static,--gc-sections,-T../TM4C.ld -mthumb -mcpu=cortex-m4 -o "GPIO_example.elf"  ./main.o ./startup_gcc.o   -ldriver
+Finished building target: GPIO_example.elf
+ 
+make --no-print-directory post-build
+Generate binary file from elf file
+arm-none-eabi-objcopy -O binary GPIO_example.elf GPIO_example.bin
+ 
+11:32:13 **** Incremental Build of configuration Debug for project GPIO_example ****
+make all 
+make: Nothing to be done for `all'.
+11:40:44 **** Incremental Build of configuration Debug for project GPIO_example ****
+make all 
+make: Nothing to be done for `all'.
+11:42:02 **** Incremental Build of configuration Debug for project GPIO_example ****
+make all 
+make: Nothing to be done for `all'.
+11:42:03 **** Incremental Build of configuration Debug for project template ****
+make all 
+make: Nothing to be done for `all'.
+11:42:03 **** Incremental Build of configuration Debug for project GPIO_example ****
+make all 
+make: Nothing to be done for `all'.
