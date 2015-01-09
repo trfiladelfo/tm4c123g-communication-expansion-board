@@ -1,0 +1,11 @@
+this flags compile the applications but no correctly debug it!
+This is a mix of TolHnet flags and working internet flags
+
+Compiler's flag:
+
+-DPART_TH4C123GH6PM -D__ASSEMBLY__ -DTARGET_IS_TM4C123_RB1 -DARM_MATH_CM4 -I/home/luca/src/stellaris/Tivaware -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -mcpu=cortex-m4 -mthumb -mlittle-endian -Wall -Wextra -Wno-missing-field-initializers -std=c99 -g -ffunction-sections -flto -fno-builtin -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -fdata-sections
+
+Linker's flags:
+
+-L/home/luca/src/stellaris/Tivaware/driverlib/gcc 
+-static -Wl,--gc-sections -flto -Wl,--entry=ResetISR -nostartfiles -T../tm4c123gh6pm.ld -mthumb -mcpu=cortex-m4
