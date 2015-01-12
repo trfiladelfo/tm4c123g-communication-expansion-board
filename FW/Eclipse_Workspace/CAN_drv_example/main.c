@@ -8,11 +8,8 @@
 #include "driverlib/rom.h"
 #include "driverlib/sysctl.h"
 #include "driverlib/gpio.h"
-//#include "driverlib/systick.h"
 
 
-
-#define SYSTICKS_PER_SECOND 100
 
 int
 main(void)

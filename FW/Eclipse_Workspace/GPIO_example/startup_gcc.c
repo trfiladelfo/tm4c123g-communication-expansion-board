@@ -45,6 +45,18 @@ extern int main(void);
 
 //*****************************************************************************
 //
+// The GPIO_PORTF Interrupt Service Routine
+//
+//*****************************************************************************
+//extern void GPIO_PORTF_isr(void);		//	un-comment if you want to use static
+										//	allocation of interrupt handler into
+										//	interrupt table vector below but
+										//	remeber to insert the ISR name into
+										//	the table e.g. GPIO_PORTF_isr at
+										// 	proper row.
+
+//*****************************************************************************
+//
 // Reserve space for the system stack.
 //
 //*****************************************************************************
@@ -106,7 +118,7 @@ void (* const g_pfnVectors[])(void) =
     IntDefaultHandler,                      // Analog Comparator 2
     IntDefaultHandler,                      // System Control (PLL, OSC, BO)
     IntDefaultHandler,                      // FLASH Control
-    IntDefaultHandler,                      // GPIO Port F
+    IntDefaultHandler,			            // GPIO Port F
     IntDefaultHandler,                      // GPIO Port G
     IntDefaultHandler,                      // GPIO Port H
     IntDefaultHandler,                      // UART2 Rx and Tx
