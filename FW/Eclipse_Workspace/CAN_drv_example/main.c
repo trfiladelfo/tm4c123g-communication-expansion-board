@@ -2,17 +2,30 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#include "my_uart.h"
+#include "app_can.h"
+
 #include "inc/tm4c123gh6pm.h"
 #include "inc/hw_memmap.h"
 
 #include "driverlib/rom.h"
 #include "driverlib/sysctl.h"
 #include "driverlib/gpio.h"
+#include "driverlib/can.h"
+
+#include "utils/uartstdio.h"
 
 
+void CANIntHandler ()
+{
+	GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3, 0);
+	SysCtlDelay(10000000);
+	GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3, GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3);
+	CANIntClear(CAN0_BASE,CAN_INT_INTID_STATUS);
+}
 
-int
-main(void)
+
+int main(void)
 {
 	// setup the system clock to run at 80 MHz from the external crystal:
 	ROM_SysCtlClockSet(SYSCTL_SYSDIV_2_5 | SYSCTL_USE_PLL | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
@@ -35,52 +48,21 @@ main(void)
 	ROM_SysCtlPeripheralSleepEnable(SYSCTL_PERIPH_GPIOF);
 
 	// setup pins connected to RGB LED:
-	ROM_GPIOPinTypeGPIOOutput(GPIO_PORTB_BASE, GPIO_PIN_6 | GPIO_PIN_7);
-
 	ROM_GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3);
 
-	ROM_GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_6 | GPIO_PIN_7, GPIO_PIN_7);
+	//setup CAN controller
+	app_can_init();
 
-
-	uint32_t ui32Loop = 0;
     //
     // Loop forever.
     //
     while(1)
     {
-        //
-        // Turn on the red LED .
-        //
-        ROM_GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 , GPIO_PIN_1);
-        ROM_GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_7, GPIO_PIN_7);
-        //
-        // Delay for a bit.
-        //
-        for(ui32Loop = 0; ui32Loop < 2000000; ui32Loop++)
-        {
-        }
-
-        //
-        // Turn on the green LED.
-        //
-        ROM_GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 , GPIO_PIN_2);
-        ROM_GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_7, 0);
-        //
-        // Delay for a bit.
-        //
-        for(ui32Loop = 0; ui32Loop < 2000000; ui32Loop++)
-        {
-        }
-
-        //
-        // Turn on the blue LED.
-        //
-        ROM_GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 , GPIO_PIN_3);
-        //
-        // Delay for a bit.
-        //
-        for(ui32Loop = 0; ui32Loop < 2000000; ui32Loop++)
-        {
-        }
+    	GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3, GPIO_PIN_1);
+    	SysCtlDelay(10000000);
+    	GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3, GPIO_PIN_2);
+    	SysCtlDelay(10000000);
+    	GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3, GPIO_PIN_3);
+    	SysCtlDelay(10000000);
     }
 }

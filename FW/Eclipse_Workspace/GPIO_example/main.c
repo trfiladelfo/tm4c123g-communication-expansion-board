@@ -14,7 +14,7 @@
 #include "driverlib/gpio.h"
 #include "driverlib/interrupt.h"
 
-#include <utils/uartstdio.h>
+#include "utils/uartstdio.h"
 
 //#include "driverlib/systick.h"
 
@@ -77,11 +77,7 @@ int main(void)
 	ROM_SysCtlPeripheralSleepEnable(SYSCTL_PERIPH_GPIOF);
 
 	// setup pins connected to RGB LED:
-	ROM_GPIOPinTypeGPIOOutput(GPIO_PORTB_BASE, GPIO_PIN_6 | GPIO_PIN_7);
-
 	ROM_GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3);
-
-	ROM_GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_6 | GPIO_PIN_7, GPIO_PIN_7);
 
 	//setup the UART console
 	InitConsole();

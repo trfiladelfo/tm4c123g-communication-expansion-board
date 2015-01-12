@@ -1,5 +1,5 @@
 architecture=cortex-m4
 board=---  none ---
-chip=lm4f122e5qc
+chip=lm4f120h5qr
 eclipse.preferences.version=1
 vendor=TexasInstruments
