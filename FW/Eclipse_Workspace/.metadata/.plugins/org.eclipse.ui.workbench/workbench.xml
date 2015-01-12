@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="20" version="2.0">
+<workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="0" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -8,7 +8,7 @@
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="306" y="36"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="276" y="36"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="226" y="36"/>
 <coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -31,19 +31,13 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="interrupt.h" partName="interrupt.h" title="interrupt.h" tooltip="/home/luca/src/stellaris/Tivaware/driverlib/interrupt.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" path="/home/luca/src/stellaris/Tivaware/driverlib/interrupt.h" project="GPIO_example"/>
-<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="3442" selectionTopPixel="17"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="hw_gpio.h" partName="hw_gpio.h" title="hw_gpio.h" tooltip="/home/luca/src/stellaris/Tivaware/inc/hw_gpio.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" path="/home/luca/src/stellaris/Tivaware/inc/hw_gpio.h" project="GPIO_example"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6894" selectionTopPixel="1171"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="hw_types.h" partName="hw_types.h" title="hw_types.h" tooltip="/home/luca/src/stellaris/Tivaware/inc/hw_types.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" path="/home/luca/src/stellaris/Tivaware/inc/hw_types.h" project="GPIO_example"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="85" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -52,10 +46,6 @@
 </view>
 <view id="org.eclipse.cdt.ui.CView" partName="C/C++ Projects">
 <viewState horizontalPosition="0" verticalPosition="0">
-<expanded>
-<element path="/home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/CAN_drv_example"/>
-</expanded>
-<selection/>
 <customFilters userDefinedPatternsEnabled="false">
 <xmlDefinedFilters>
 <child filterId="org.eclipse.cdt.internal.ui.CView.UsingDeclarationFilter" isEnabled="false"/>
@@ -119,10 +109,12 @@
 <viewState/>
 </view>
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
+<view id="org.eclipse.cdt.ui.callHierarchy" partName="Call Hierarchy">
+<viewState showFilesInLabels="false" variableFilter="false"/>
+</view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors"/>
+<expanded>&#x0A;<category IMemento.internal.id="Errors"/>
 <category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Warnings (2 items)"/>
 </expanded>
@@ -133,9 +125,6 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
-</view>
-<view id="org.eclipse.cdt.ui.callHierarchy" partName="Call Hierarchy">
-<viewState showFilesInLabels="false" variableFilter="false"/>
 </view>
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
@@ -370,27 +359,18 @@
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.cdt.dsf.debug.ui.disassembly.view"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.7497006" ratioLeft="1252" ratioRight="418" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.7497006" ratioLeft="1252" ratioRight="418" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74971944" ratioLeft="668" ratioRight="223" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74971944" ratioLeft="668" ratioRight="223" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.cdt.debug.ui.executablesView" label="Executables"/>
@@ -399,8 +379,7 @@
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
@@ -410,28 +389,22 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.4491018" ratioLeft="300" ratioRight="368" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7497006" ratioLeft="1252" ratioRight="418" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.cdt.dsf.debug.ui.disassembly.view" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7497006" ratioLeft="1252" ratioRight="418" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.cdt.dsf.debug.ui.disassembly.view" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="Disassembly"/>
 <page content="org.eclipse.cdt.visualizer.view" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="835" ratioRight="835" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="835" ratioRight="835" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="Registers"/>
 <page content="org.eclipse.debug.ui.ModuleView" label="Modules"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.SignalsView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
@@ -445,156 +418,164 @@
 <workingSets/>
 <navigationHistory>
 <editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GPIO_example/my_uart.c"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/luca/src/stellaris/Tivaware/driverlib/pin_map.h" project="GPIO_example"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GPIO_example/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GPIO_example/startup_gcc.c"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/luca/src/stellaris/Tivaware/driverlib/interrupt.h" project="GPIO_example"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/luca/src/stellaris/Tivaware/inc/hw_gpio.h" project="GPIO_example"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GPIO_example/startup_gcc.c"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/luca/src/stellaris/Tivaware/driverlib/interrupt.h" project="GPIO_example"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/luca/src/stellaris/Tivaware/utils/uartstdio.h" project="GPIO_example"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/luca/src/stellaris/Tivaware/inc/hw_types.h" project="GPIO_example"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/luca/src/stellaris/Tivaware/driverlib/gpio.h" project="GPIO_example"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GPIO_example/uartstdio.c"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/luca/src/stellaris/Tivaware/driverlib/sysctl.h" project="GPIO_example"/>
 </editors>
-<item historyLabel="startup_gcc.c" index="1">
-<position info="not_deleted" x="4083" y="0"/>
+<item historyLabel="my_uart.c" index="0">
+<position info="not_deleted" x="255" y="0"/>
 </item>
-<item historyLabel="startup_gcc.c" index="1">
-<position info="not_deleted" x="2040" y="32"/>
+<item historyLabel="my_uart.c" index="0">
+<position info="not_deleted" x="1555" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="3650" y="0"/>
+<item historyLabel="pin_map.h" index="1">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5787" y="0"/>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="651" y="0"/>
+<item historyLabel="my_uart.c" index="0">
+<position info="not_deleted" x="371" y="0"/>
 </item>
-<item historyLabel="startup_gcc.c" index="1">
-<position info="not_deleted" x="2053" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="448" y="14"/>
-</item>
-<item historyLabel="startup_gcc.c" index="1">
-<position info="not_deleted" x="5776" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="448" y="14"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1694" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="4261" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="4495" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="4663" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="752" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1694" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="4259" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="4283" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="3652" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="651" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="646" y="0"/>
-</item>
-<item historyLabel="startup_gcc.c" index="1">
-<position info="not_deleted" x="5776" y="0"/>
-</item>
-<item historyLabel="interrupt.h" index="2">
-<position info="not_deleted" x="3442" y="9"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="4188" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="4372" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="4828" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="4405" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="4405" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="4405" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="125" y="0"/>
-</item>
-<item historyLabel="hw_gpio.h" index="3">
-<position info="not_deleted" x="7007" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="3648" y="0"/>
-</item>
-<item historyLabel="hw_gpio.h" index="3">
-<position info="not_deleted" x="7007" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="3648" y="0"/>
-</item>
-<item historyLabel="hw_gpio.h" index="3">
-<position info="not_deleted" x="6894" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
+<item historyLabel="uartstdio.h" index="3">
 <position/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="3976" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="3715" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
+<item historyLabel="uartstdio.h" index="3">
 <position/>
 </item>
-<item historyLabel="main.c" index="0">
+<item historyLabel="uartstdio.h" index="3">
 <position/>
 </item>
-<item historyLabel="main.c" index="0">
+<item historyLabel="my_uart.c" index="0">
+<position info="not_deleted" x="371" y="0"/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="my_uart.c" index="0">
+<position info="not_deleted" x="378" y="0"/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="2891" y="0"/>
+</item>
+<item historyLabel="my_uart.c" index="0">
+<position info="not_deleted" x="378" y="0"/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="865" y="0"/>
+</item>
+<item historyLabel="my_uart.c" index="0">
+<position info="not_deleted" x="350" y="28"/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="383" y="0"/>
+</item>
+<item historyLabel="uartstdio.h" index="3">
 <position/>
 </item>
-<item historyLabel="main.c" index="0">
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="383" y="0"/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="862" y="0"/>
+</item>
+<item historyLabel="main.c" index="2">
 <position/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="627" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="974" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="592" y="0"/>
-</item>
-<item historyLabel="startup_gcc.c" index="4">
+<item historyLabel="uartstdio.h" index="3">
 <position/>
 </item>
-<item historyLabel="interrupt.h" index="5">
-<position info="not_deleted" x="3442" y="9"/>
+<item historyLabel="main.c" index="2">
+<position/>
 </item>
-<item historyLabel="startup_gcc.c" index="4">
-<position info="not_deleted" x="2337" y="0"/>
+<item historyLabel="my_uart.c" index="0">
+<position info="not_deleted" x="350" y="28"/>
 </item>
-<item active="true" historyLabel="main.c" index="0">
-<position info="not_deleted" x="4090" y="0"/>
+<item historyLabel="uartstdio.h" index="3">
+<position/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="228" y="0"/>
+</item>
+<item historyLabel="hw_types.h" index="4">
+<position info="not_deleted" x="85" y="0"/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="385" y="0"/>
+</item>
+<item historyLabel="uartstdio.h" index="3">
+<position/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="383" y="0"/>
+</item>
+<item historyLabel="uartstdio.h" index="3">
+<position/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="318" y="0"/>
+</item>
+<item historyLabel="gpio.h" index="5">
+<position info="not_deleted" x="85" y="0"/>
+</item>
+<item historyLabel="main.c" index="2">
+<position/>
+</item>
+<item historyLabel="uartstdio.h" index="3">
+<position/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="426" y="0"/>
+</item>
+<item historyLabel="my_uart.c" index="0">
+<position info="not_deleted" x="379" y="0"/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="842" y="0"/>
+</item>
+<item historyLabel="uartstdio.c" index="6">
+<position info="not_deleted" x="1553" y="0"/>
+</item>
+<item historyLabel="uartstdio.h" index="3">
+<position info="not_deleted" x="85" y="0"/>
+</item>
+<item historyLabel="uartstdio.c" index="6">
+<position info="not_deleted" x="1553" y="0"/>
+</item>
+<item historyLabel="my_uart.c" index="0">
+<position info="not_deleted" x="1504" y="0"/>
+</item>
+<item historyLabel="uartstdio.c" index="6">
+<position info="not_deleted" x="13335" y="0"/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="842" y="0"/>
+</item>
+<item historyLabel="my_uart.c" index="0">
+<position info="not_deleted" x="1529" y="0"/>
+</item>
+<item historyLabel="sysctl.h" index="7">
+<position info="not_deleted" x="37653" y="14"/>
+</item>
+<item historyLabel="my_uart.c" index="0">
+<position info="not_deleted" x="1529" y="0"/>
+</item>
+<item historyLabel="uartstdio.c" index="6">
+<position info="not_deleted" x="13335" y="0"/>
+</item>
+<item historyLabel="my_uart.c" index="0">
+<position info="not_deleted" x="1533" y="0"/>
+</item>
+<item historyLabel="uartstdio.c" index="6">
+<position info="not_deleted" x="13335" y="0"/>
+</item>
+<item active="true" historyLabel="main.c" index="2">
+<position info="not_deleted" x="1602" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -602,6 +583,12 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="topLeft"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="topRight"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -609,48 +596,55 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="hw_gpio.h" tooltip="/home/luca/src/stellaris/Tivaware/inc/hw_gpio.h">
-<persistable path="/home/luca/src/stellaris/Tivaware/inc/hw_gpio.h" project="GPIO_example"/>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="sysctl.h" tooltip="/home/luca/src/stellaris/Tivaware/driverlib/sysctl.h">
+<persistable path="/home/luca/src/stellaris/Tivaware/driverlib/sysctl.h" project="GPIO_example"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_gcc.c" tooltip="GPIO_example/startup_gcc.c">
-<persistable path="/GPIO_example/startup_gcc.c"/>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="uartstdio.h" tooltip="/home/luca/src/stellaris/Tivaware/utils/uartstdio.h">
+<persistable path="/home/luca/src/stellaris/Tivaware/utils/uartstdio.h" project="GPIO_example"/>
 </file>
-<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="rom.h" tooltip="/home/luca/src/stellaris/Tivaware/driverlib/rom.h">
-<persistable path="/home/luca/src/stellaris/Tivaware/driverlib/rom.h" project="GPIO_example"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="uartstdio.c" tooltip="GPIO_example/uartstdio.c">
+<persistable path="/GPIO_example/uartstdio.c"/>
 </file>
 <file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="gpio.h" tooltip="/home/luca/src/stellaris/Tivaware/driverlib/gpio.h">
 <persistable path="/home/luca/src/stellaris/Tivaware/driverlib/gpio.h" project="GPIO_example"/>
 </file>
-<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="interrupt.h" tooltip="/home/luca/src/stellaris/Tivaware/driverlib/interrupt.h">
-<persistable path="/home/luca/src/stellaris/Tivaware/driverlib/interrupt.h" project="GPIO_example"/>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="hw_types.h" tooltip="/home/luca/src/stellaris/Tivaware/inc/hw_types.h">
+<persistable path="/home/luca/src/stellaris/Tivaware/inc/hw_types.h" project="GPIO_example"/>
+</file>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pin_map.h" tooltip="/home/luca/src/stellaris/Tivaware/driverlib/pin_map.h">
+<persistable path="/home/luca/src/stellaris/Tivaware/driverlib/pin_map.h" project="GPIO_example"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="my_uart.c" tooltip="GPIO_example/my_uart.c">
+<persistable path="/GPIO_example/my_uart.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="GPIO_example/main.c">
 <persistable path="/GPIO_example/main.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="CAN_drv_example/main.c">
-<persistable path="/CAN_drv_example/main.c"/>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="rom.h" tooltip="/home/luca/src/stellaris/Tivaware/driverlib/rom.h">
+<persistable path="/home/luca/src/stellaris/Tivaware/driverlib/rom.h" project="GPIO_example"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="my_uart.h" tooltip="GPIO_example/my_uart.h">
+<persistable path="/GPIO_example/my_uart.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_gcc.c" tooltip="GPIO_example/startup_gcc.c">
+<persistable path="/GPIO_example/startup_gcc.c"/>
+</file>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="hw_gpio.h" tooltip="/home/luca/src/stellaris/Tivaware/inc/hw_gpio.h">
+<persistable path="/home/luca/src/stellaris/Tivaware/inc/hw_gpio.h" project="GPIO_example"/>
+</file>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="interrupt.h" tooltip="/home/luca/src/stellaris/Tivaware/driverlib/interrupt.h">
+<persistable path="/home/luca/src/stellaris/Tivaware/driverlib/interrupt.h" project="GPIO_example"/>
 </file>
 <file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="systick.h" tooltip="/home/luca/src/stellaris/Tivaware/driverlib/systick.h">
 <persistable path="/home/luca/src/stellaris/Tivaware/driverlib/systick.h" project="GPIO_example"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="template_TIVA_C/main.c">
 <persistable path="/template_TIVA_C/main.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="previous_flags" tooltip="template_TIVA_C/previous_flags">
-<persistable path="/template_TIVA_C/previous_flags"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_gcc.c" tooltip="template_TIVA_C/startup_gcc.c">
-<persistable path="/template_TIVA_C/startup_gcc.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="ReadME.txt" tooltip="template_TIVA_C/ReadME.txt">
-<persistable path="/template_TIVA_C/ReadME.txt"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="tm4c123gh6pm.ld" tooltip="template_TIVA_C/tm4c123gh6pm.ld">
-<persistable path="/template_TIVA_C/tm4c123gh6pm.ld"/>
 </file>
 </mruList>
 </workbench>

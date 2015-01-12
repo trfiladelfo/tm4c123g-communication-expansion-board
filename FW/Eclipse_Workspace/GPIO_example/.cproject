@@ -24,7 +24,7 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.323145044" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.debugging.level.647693213" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.526387969" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
-									<listOptionValue builtIn="false" value="PART_TH4C123GH6PM"/>
+									<listOptionValue builtIn="false" value="PART_TM4C123GH6PM"/>
 									<listOptionValue builtIn="false" value="__ASSEMBLY__ "/>
 									<listOptionValue builtIn="false" value="TARGET_IS_TM4C123_RB1"/>
 									<listOptionValue builtIn="false" value="ARM_MATH_CM4"/>
@@ -46,6 +46,7 @@
 								</option>
 								<option id="gnu.c.link.option.paths.840300981" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="/home/luca/src/stellaris/Tivaware/driverlib/gcc"/>
+									<listOptionValue builtIn="false" value="/home/luca/src/stellaris/Tivaware"/>
 								</option>
 								<option id="gnu.c.link.option.ldflags.1747694980" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="-Wl,--static,--gc-sections,-T../tm4c123gh6pm.ld -mthumb -mcpu=cortex-m4 -Wl,--entry=ResetISR" valueType="string"/>
 								<option id="gnu.c.link.option.nostart.869585006" name="Do not use standard start files (-nostartfiles)" superClass="gnu.c.link.option.nostart" value="true" valueType="boolean"/>

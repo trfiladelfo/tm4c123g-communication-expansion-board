@@ -1,7 +1,7 @@
-15:10:41 **** Clean-only build of configuration Debug for project GPIO_example ****
+15:13:22 **** Clean-only build of configuration Debug for project GPIO_example ****
 make clean 
-rm -rf  ./main.o ./startup_gcc.o  ./main.d ./startup_gcc.d  GPIO_example.elf
+rm -rf  ./main.o ./my_uart.o ./startup_gcc.o ./uartstdio.o  ./main.d ./my_uart.d ./startup_gcc.d ./uartstdio.d  GPIO_example.elf
  
 
-15:10:41 Build Finished (took 63ms)
+15:13:22 Build Finished (took 71ms)
 

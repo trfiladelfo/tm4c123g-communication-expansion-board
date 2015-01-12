@@ -2,6 +2,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#include "my_uart.h"
+
 #include "inc/tm4c123gh6pm.h"
 #include "inc/hw_memmap.h"
 #include "inc/hw_gpio.h" //for macro declaration of GPIO_O_LOCK and GPIO_O_CR
@@ -11,6 +13,8 @@
 #include "driverlib/sysctl.h"
 #include "driverlib/gpio.h"
 #include "driverlib/interrupt.h"
+
+#include <utils/uartstdio.h>
 
 //#include "driverlib/systick.h"
 
@@ -25,21 +29,27 @@ void GPIO_PORTF_isr(void)
 	{
 	case GPIO_PIN_4:																			//if SW1 is pressed
 		ROM_GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);								//turn on RED LED
+		UARTprintf("RED LED on\n\r");
 	break;
 
 	case GPIO_PIN_0:																			//if SW2 is pressed
 		ROM_GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2);								//turn on BLUE LED
+		UARTprintf("BLUE LED on\n\r");
 	break;
 
 	case (GPIO_PIN_0|GPIO_PIN_4):																//either SW1 and SW2 are pressed
 		ROM_GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2 | GPIO_PIN_1, GPIO_PIN_2 | GPIO_PIN_1);	//turn on RED & BLUE LEDs
+		UARTprintf("RED & BLUE LEDs on\n\r");
 	break;
 
 	default:																					//neither SW1 nor SW2 are pressed
 		ROM_GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2 | GPIO_PIN_1 , 0);							//turn off RED & BLUE LEDs
+		UARTprintf("RED & BLUE LEDs off\n\r");
 	break;
 
 	}
+
+	GPIOIntClear(GPIO_PORTF_BASE, GPIO_INT_PIN_0 | GPIO_INT_PIN_4);
 
 }
 
@@ -73,7 +83,10 @@ int main(void)
 
 	ROM_GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_6 | GPIO_PIN_7, GPIO_PIN_7);
 
-// TODO: test either the interrupts on a simple pushbutton to turn-on a led:
+	//setup the UART console
+	InitConsole();
+
+// Test either the interrupts on a simple pushbutton to turn-on a led:
 // 			1- interrupt with static allocation on the vector table
 //			2- interrupt with dynamic allocation on the vector table
 
