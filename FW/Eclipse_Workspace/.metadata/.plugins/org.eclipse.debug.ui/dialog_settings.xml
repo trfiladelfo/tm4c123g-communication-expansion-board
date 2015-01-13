@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="true" key="EXT_FOLDER_SOURCE_LAST_SUBDIR_SETTING"/>
 	<section name="org.eclipse.debug.ui.SCOPED_SAVE_SELECTION_DIALOG">
 		<item value="296" key="DIALOG_WIDTH"/>
-		<item value="349" key="DIALOG_HEIGHT"/>
+		<item value="341" key="DIALOG_HEIGHT"/>
 		<item value="1|Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.debug.ui.STRING_VARIABLE_SELECTION_DIALOG_SECTION">
@@ -23,7 +24,7 @@
 		<item value="1|Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.debug.ui.LAUNCH_CONFIGURATIONS_DIALOG_SECTION">
-		<item value="1260" key="DIALOG_WIDTH"/>
+		<item value="930" key="DIALOG_WIDTH"/>
 		<item value="org.eclipse.ui.externaltools.ProgramLaunchConfigurationType, org.eclipse.cdt.debug.gdbjtag.launchConfigurationType, org.eclipse.cdt.launch.launchGroup, " key="org.eclipse.debug.ui.EXPANDED_NODES"/>
 		<item value="666" key="DIALOG_HEIGHT"/>
 		<item value="359" key="org.eclipse.debug.ui.DIALOG_SASH_WEIGHTS_1"/>

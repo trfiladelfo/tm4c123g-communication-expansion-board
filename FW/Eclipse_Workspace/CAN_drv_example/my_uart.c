@@ -59,7 +59,7 @@ InitConsole(void)
     //
     // Initialize the UART1 for console I/O.
     //
-    UARTStdioConfig(1, 115200, SysCtlClockGet());
+    UARTStdioConfig(1, 115200, 80000000);
 }
 
 

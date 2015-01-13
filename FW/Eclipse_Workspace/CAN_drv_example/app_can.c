@@ -25,15 +25,7 @@
 
 
 
-#define CAN_BITRATE 500000	// is the desired bit rate of the CAN transmission
-
-/*
-static void CANIntHandler(void)
-{
-
-}
-*/
-
+#define CAN_BITRATE 125000	// is the desired bit rate of the CAN transmission
 
 void app_can_init()
 {
@@ -89,7 +81,7 @@ SysCtlPeripheralPowerOn(SYSCTL_PERIPH_CAN0);
 		// It takes five clock cycles after the write to enable a peripheral before
 		// the the peripheral is actually enabled. Uncomment following line if needed.
 		//
-		// SysCtlDelay(2);	//it generates a delay by executing (two times) a 3 instruction cycle loop
+	SysCtlDelay(10);	//it generates a delay by executing (two times) a 3 instruction cycle loop
 
 	// 6.2.5.7 CANInit
 		// Initialize the CAN controller

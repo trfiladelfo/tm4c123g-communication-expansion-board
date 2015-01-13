@@ -5630,3 +5630,1164 @@ Error message from debugger back end:
 java.lang.Exception: "monitor" command not supported by this target.
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+!SESSION 2015-01-12 18:32:17.627 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.debug.core 4 120 2015-01-12 18:38:25.468
+!MESSAGE Variable references empty selection: ${project_name}
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-12 18:39:05.823
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsets in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-12 18:39:05.823
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsetsTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-12 18:39:05.823
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytes in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-12 18:39:05.823
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytesTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-12 18:39:05.823
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddress in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-12 18:39:05.824
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddressTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.debug.core 4 120 2015-01-12 18:40:48.663
+!MESSAGE Variable references empty selection: ${project_name}
+!SESSION 2015-01-12 18:46:59.405 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.debug.core 4 120 2015-01-12 19:07:05.496
+!MESSAGE Variable references empty selection: ${project_name}
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-12 19:07:13.797
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsets in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-12 19:07:13.797
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsetsTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-12 19:07:13.797
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytes in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-12 19:07:13.798
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytesTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-12 19:07:13.798
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddress in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-12 19:07:13.798
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddressTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-01-12 19:18:29.240
+!MESSAGE Indexed 'TI_TIVA_CAN_simpleTX' (2 sources, 7 headers) in 0.52 sec: 79 declarations; 313 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.debug.core 4 120 2015-01-12 19:36:53.363
+!MESSAGE Variable references empty selection: ${project_name}
+
+!ENTRY org.eclipse.debug.core 4 120 2015-01-12 19:37:00.294
+!MESSAGE Variable references empty selection: ${project_name}
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2015-01-12 19:43:56.863
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: Debug/CAN_drv_example.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:124)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:286)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:143)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.cdt.launch.internal.MultiLaunchConfigurationDelegate.launch(MultiLaunchConfigurationDelegate.java:394)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2015-01-12 19:43:56.915
+!MESSAGE Debug/CAN_drv_example.elf not found
+!STACK 0
+java.io.FileNotFoundException: Debug/CAN_drv_example.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:124)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:286)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:143)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.cdt.launch.internal.MultiLaunchConfigurationDelegate.launch(MultiLaunchConfigurationDelegate.java:394)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2015-01-12 19:44:04.701
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: Debug/CAN_drv_example.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:124)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:286)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:143)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.cdt.launch.internal.MultiLaunchConfigurationDelegate.launch(MultiLaunchConfigurationDelegate.java:394)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2015-01-12 19:44:04.701
+!MESSAGE Debug/CAN_drv_example.elf not found
+!STACK 0
+java.io.FileNotFoundException: Debug/CAN_drv_example.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:124)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:286)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:143)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.cdt.launch.internal.MultiLaunchConfigurationDelegate.launch(MultiLaunchConfigurationDelegate.java:394)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-12 19:44:04.701
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.contexts.DsfSuspendTrigger$2@555e9d): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status null children=[Status ERROR: org.eclipse.cdt.dsf.gdb.ui code=10001 Not available null Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.contexts.DsfSuspendTrigger$6@1542baf): Status ERROR: org.eclipse.cdt.dsf.gdb.ui code=10001 Not available null' resulted in a rejected execution exception. null]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb.ui 4 10001 2015-01-12 19:44:04.702
+!MESSAGE Not available
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2015-01-12 19:44:04.702
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.contexts.DsfSuspendTrigger$6@1542baf): Status ERROR: org.eclipse.cdt.dsf.gdb.ui code=10001 Not available null' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-12 19:44:11.344
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.contexts.DsfSuspendTrigger$2@9fd2dd): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status null children=[Status ERROR: org.eclipse.cdt.dsf.gdb.ui code=10001 Not available null Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.contexts.DsfSuspendTrigger$6@455060): Status ERROR: org.eclipse.cdt.dsf.gdb.ui code=10001 Not available null' resulted in a rejected execution exception. null]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb.ui 4 10001 2015-01-12 19:44:11.344
+!MESSAGE Not available
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2015-01-12 19:44:11.344
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.contexts.DsfSuspendTrigger$6@455060): Status ERROR: org.eclipse.cdt.dsf.gdb.ui code=10001 Not available null' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2015-01-12 19:44:11.347
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: Debug/CAN_drv_example.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:124)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:286)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:143)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.cdt.launch.internal.MultiLaunchConfigurationDelegate.launch(MultiLaunchConfigurationDelegate.java:394)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2015-01-12 19:44:11.348
+!MESSAGE Debug/CAN_drv_example.elf not found
+!STACK 0
+java.io.FileNotFoundException: Debug/CAN_drv_example.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:124)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:286)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:143)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.cdt.launch.internal.MultiLaunchConfigurationDelegate.launch(MultiLaunchConfigurationDelegate.java:394)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2015-01-12 19:44:38.953
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: Debug/CAN_drv_example.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:124)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:286)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:143)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.cdt.launch.internal.MultiLaunchConfigurationDelegate.launch(MultiLaunchConfigurationDelegate.java:394)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2015-01-12 19:44:38.953
+!MESSAGE Debug/CAN_drv_example.elf not found
+!STACK 0
+java.io.FileNotFoundException: Debug/CAN_drv_example.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:124)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:286)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:143)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.cdt.launch.internal.MultiLaunchConfigurationDelegate.launch(MultiLaunchConfigurationDelegate.java:394)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-12 19:44:38.957
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.contexts.DsfSuspendTrigger$2@14052ff): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status null children=[Status ERROR: org.eclipse.cdt.dsf.gdb.ui code=10001 Not available null Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.contexts.DsfSuspendTrigger$6@f7debd): Status ERROR: org.eclipse.cdt.dsf.gdb.ui code=10001 Not available null' resulted in a rejected execution exception. null]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb.ui 4 10001 2015-01-12 19:44:38.957
+!MESSAGE Not available
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2015-01-12 19:44:38.957
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.contexts.DsfSuspendTrigger$6@f7debd): Status ERROR: org.eclipse.cdt.dsf.gdb.ui code=10001 Not available null' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.debug.core 4 120 2015-01-12 19:44:47.258
+!MESSAGE Variable references empty selection: ${project_name}
+!SESSION 2015-01-13 00:24:03.216 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-01-13 00:24:27.023
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2015-01-13 09:23:02.116 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2015-01-13 09:32:42.142
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/CAN_drv_example.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:124)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:286)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:143)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.cdt.launch.internal.MultiLaunchConfigurationDelegate.launch(MultiLaunchConfigurationDelegate.java:394)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2015-01-13 09:32:42.143
+!MESSAGE /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/CAN_drv_example.elf not found
+!STACK 0
+java.io.FileNotFoundException: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/CAN_drv_example.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:124)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:286)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:143)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.cdt.launch.internal.MultiLaunchConfigurationDelegate.launch(MultiLaunchConfigurationDelegate.java:394)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 09:34:47.086
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsets in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 09:34:47.086
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsetsTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 09:34:47.086
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytes in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 09:34:47.087
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytesTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 09:34:47.087
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddress in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 09:34:47.087
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddressTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2015-01-13 09:36:09.987
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Connection is shut down
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:115)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:231)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.cdt.launch.internal.MultiLaunchConfigurationDelegate.launch(MultiLaunchConfigurationDelegate.java:394)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Connection is shut down
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10001 2015-01-13 09:36:09.991
+!MESSAGE Connection is shut down
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10001 2015-01-13 09:36:09.991
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2015-01-13 09:39:57.868
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Connection is shut down
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:115)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:231)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.cdt.launch.internal.MultiLaunchConfigurationDelegate.launch(MultiLaunchConfigurationDelegate.java:394)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Connection is shut down
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10001 2015-01-13 09:39:57.868
+!MESSAGE Connection is shut down
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10001 2015-01-13 09:39:57.868
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.core.filesystem 4 272 2015-01-13 09:41:33.369
+!MESSAGE Could not move: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/TI_TIVA_CAN_simpleTX.elf.
+!STACK 1
+org.eclipse.core.runtime.CoreException: File not found: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/TI_TIVA_CAN_simpleTX.elf.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at org.eclipse.core.filesystem.provider.FileStore.copyFile(FileStore.java:220)
+	at org.eclipse.core.filesystem.provider.FileStore.copy(FileStore.java:143)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.copy(LocalFile.java:111)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:410)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:92)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:150)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:110)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:349)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1977)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: java.io.FileNotFoundException: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/TI_TIVA_CAN_simpleTX.elf (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 28 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2015-01-13 09:41:33.370
+!MESSAGE File not found: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/TI_TIVA_CAN_simpleTX.elf.
+!STACK 0
+java.io.FileNotFoundException: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/TI_TIVA_CAN_simpleTX.elf (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at org.eclipse.core.filesystem.provider.FileStore.copyFile(FileStore.java:220)
+	at org.eclipse.core.filesystem.provider.FileStore.copy(FileStore.java:143)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.copy(LocalFile.java:111)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:410)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:92)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:150)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:110)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:349)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1977)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.core.filesystem 4 272 2015-01-13 09:41:33.392
+!MESSAGE Could not move: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/simple_tx.d.
+!STACK 1
+org.eclipse.core.runtime.CoreException: File not found: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/simple_tx.d.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at org.eclipse.core.filesystem.provider.FileStore.copyFile(FileStore.java:220)
+	at org.eclipse.core.filesystem.provider.FileStore.copy(FileStore.java:143)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.copy(LocalFile.java:111)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:410)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:92)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:150)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:110)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:349)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1977)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: java.io.FileNotFoundException: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/simple_tx.d (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 28 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2015-01-13 09:41:33.392
+!MESSAGE File not found: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/simple_tx.d.
+!STACK 0
+java.io.FileNotFoundException: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/simple_tx.d (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at org.eclipse.core.filesystem.provider.FileStore.copyFile(FileStore.java:220)
+	at org.eclipse.core.filesystem.provider.FileStore.copy(FileStore.java:143)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.copy(LocalFile.java:111)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:410)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:92)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:150)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:110)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:349)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1977)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.core.filesystem 4 272 2015-01-13 09:41:33.405
+!MESSAGE Could not move: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/simple_tx.o.
+!STACK 1
+org.eclipse.core.runtime.CoreException: File not found: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/simple_tx.o.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at org.eclipse.core.filesystem.provider.FileStore.copyFile(FileStore.java:220)
+	at org.eclipse.core.filesystem.provider.FileStore.copy(FileStore.java:143)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.copy(LocalFile.java:111)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:410)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:92)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:150)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:110)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:349)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1977)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: java.io.FileNotFoundException: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/simple_tx.o (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 28 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2015-01-13 09:41:33.406
+!MESSAGE File not found: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/simple_tx.o.
+!STACK 0
+java.io.FileNotFoundException: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/simple_tx.o (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at org.eclipse.core.filesystem.provider.FileStore.copyFile(FileStore.java:220)
+	at org.eclipse.core.filesystem.provider.FileStore.copy(FileStore.java:143)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.copy(LocalFile.java:111)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:410)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:92)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:150)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:110)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:349)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1977)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.core.filesystem 4 272 2015-01-13 09:41:33.407
+!MESSAGE Could not move: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/startup_gcc.d.
+!STACK 1
+org.eclipse.core.runtime.CoreException: File not found: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/startup_gcc.d.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at org.eclipse.core.filesystem.provider.FileStore.copyFile(FileStore.java:220)
+	at org.eclipse.core.filesystem.provider.FileStore.copy(FileStore.java:143)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.copy(LocalFile.java:111)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:410)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:92)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:150)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:110)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:349)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1977)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: java.io.FileNotFoundException: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/startup_gcc.d (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 28 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2015-01-13 09:41:33.408
+!MESSAGE File not found: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/startup_gcc.d.
+!STACK 0
+java.io.FileNotFoundException: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/startup_gcc.d (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at org.eclipse.core.filesystem.provider.FileStore.copyFile(FileStore.java:220)
+	at org.eclipse.core.filesystem.provider.FileStore.copy(FileStore.java:143)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.copy(LocalFile.java:111)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:410)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:92)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:150)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:110)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:349)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1977)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.core.filesystem 4 272 2015-01-13 09:41:33.409
+!MESSAGE Could not move: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/startup_gcc.o.
+!STACK 1
+org.eclipse.core.runtime.CoreException: File not found: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/startup_gcc.o.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at org.eclipse.core.filesystem.provider.FileStore.copyFile(FileStore.java:220)
+	at org.eclipse.core.filesystem.provider.FileStore.copy(FileStore.java:143)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.copy(LocalFile.java:111)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:410)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:92)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:150)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:110)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:349)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1977)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: java.io.FileNotFoundException: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/startup_gcc.o (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 28 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2015-01-13 09:41:33.409
+!MESSAGE File not found: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/startup_gcc.o.
+!STACK 0
+java.io.FileNotFoundException: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/startup_gcc.o (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at org.eclipse.core.filesystem.provider.FileStore.copyFile(FileStore.java:220)
+	at org.eclipse.core.filesystem.provider.FileStore.copy(FileStore.java:143)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.copy(LocalFile.java:111)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:410)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:92)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:150)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:110)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:349)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1977)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.core.filesystem 4 272 2015-01-13 09:41:33.429
+!MESSAGE Could not move: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/uartstdio.d.
+!STACK 1
+org.eclipse.core.runtime.CoreException: File not found: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/uartstdio.d.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at org.eclipse.core.filesystem.provider.FileStore.copyFile(FileStore.java:220)
+	at org.eclipse.core.filesystem.provider.FileStore.copy(FileStore.java:143)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.copy(LocalFile.java:111)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:410)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:92)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:150)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:110)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:349)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1977)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: java.io.FileNotFoundException: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/uartstdio.d (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 28 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2015-01-13 09:41:33.429
+!MESSAGE File not found: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/uartstdio.d.
+!STACK 0
+java.io.FileNotFoundException: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/uartstdio.d (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at org.eclipse.core.filesystem.provider.FileStore.copyFile(FileStore.java:220)
+	at org.eclipse.core.filesystem.provider.FileStore.copy(FileStore.java:143)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.copy(LocalFile.java:111)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:410)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:92)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:150)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:110)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:349)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1977)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.core.filesystem 4 272 2015-01-13 09:41:33.441
+!MESSAGE Could not move: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/uartstdio.o.
+!STACK 1
+org.eclipse.core.runtime.CoreException: File not found: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/uartstdio.o.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at org.eclipse.core.filesystem.provider.FileStore.copyFile(FileStore.java:220)
+	at org.eclipse.core.filesystem.provider.FileStore.copy(FileStore.java:143)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.copy(LocalFile.java:111)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:410)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:92)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:150)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:110)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:349)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1977)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: java.io.FileNotFoundException: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/uartstdio.o (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 28 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2015-01-13 09:41:33.441
+!MESSAGE File not found: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/uartstdio.o.
+!STACK 0
+java.io.FileNotFoundException: /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/TI_TIVA_CAN_simpleTX/Debug/uartstdio.o (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at org.eclipse.core.filesystem.provider.FileStore.copyFile(FileStore.java:220)
+	at org.eclipse.core.filesystem.provider.FileStore.copy(FileStore.java:143)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.copy(LocalFile.java:111)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:410)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:92)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:150)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:110)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:349)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1977)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2015-01-13 09:44:03.184
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+target extended-remote :3333
+Error message from debugger back end:
+:3333: Connection timed out. ,Failed to execute MI command:
+monitor reset halt
+Error message from debugger back end:
+"monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:115)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:231)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Failed to execute MI command:
+target extended-remote :3333
+Error message from debugger back end:
+:3333: Connection timed out.
+java.lang.Exception: :3333: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+Contains: Failed to execute MI command:
+monitor reset halt
+Error message from debugger back end:
+"monitor" command not supported by this target.
+java.lang.Exception: "monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2015-01-13 09:44:03.185
+!MESSAGE Failed to execute MI command:
+target extended-remote :3333
+Error message from debugger back end:
+:3333: Connection timed out. ,Failed to execute MI command:
+monitor reset halt
+Error message from debugger back end:
+"monitor" command not supported by this target.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-13 09:44:03.185
+!MESSAGE Failed to execute MI command:
+target extended-remote :3333
+Error message from debugger back end:
+:3333: Connection timed out.
+!STACK 0
+java.lang.Exception: :3333: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-13 09:44:03.185
+!MESSAGE Failed to execute MI command:
+monitor reset halt
+Error message from debugger back end:
+"monitor" command not supported by this target.
+!STACK 0
+java.lang.Exception: "monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2015-01-13 09:44:24.762
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Connection is shut down
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:115)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:231)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.cdt.launch.internal.MultiLaunchConfigurationDelegate.launch(MultiLaunchConfigurationDelegate.java:394)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Connection is shut down
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10001 2015-01-13 09:44:24.762
+!MESSAGE Connection is shut down
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10001 2015-01-13 09:44:24.762
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2015-01-13 11:36:46.388
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+load /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/CAN_drv_example/Debug/CAN_drv_example.elf 
+
+Error message from debugger back end:
+Error erasing flash with vFlashErase packet
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:115)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:231)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.cdt.launch.internal.MultiLaunchConfigurationDelegate.launch(MultiLaunchConfigurationDelegate.java:394)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.Exception: Error erasing flash with vFlashErase packet
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-13 11:36:46.388
+!MESSAGE Failed to execute MI command:
+load /home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/CAN_drv_example/Debug/CAN_drv_example.elf 
+
+Error message from debugger back end:
+Error erasing flash with vFlashErase packet
+!STACK 0
+java.lang.Exception: Error erasing flash with vFlashErase packet
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-13 11:38:20.046
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.viewmodel.SteppingController$3@4377a3): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-step 1
+Error message from debugger back end:
+Cannot find bounds of current function java.lang.Exception: Cannot find bounds of current function' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-13 11:38:20.046
+!MESSAGE Failed to execute MI command:
+-exec-step 1
+Error message from debugger back end:
+Cannot find bounds of current function
+!STACK 0
+java.lang.Exception: Cannot find bounds of current function
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-13 11:38:20.710
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.viewmodel.SteppingController$3@19daf12): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-step 1
+Error message from debugger back end:
+Cannot find bounds of current function java.lang.Exception: Cannot find bounds of current function' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-13 11:38:20.710
+!MESSAGE Failed to execute MI command:
+-exec-step 1
+Error message from debugger back end:
+Cannot find bounds of current function
+!STACK 0
+java.lang.Exception: Cannot find bounds of current function
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-13 11:38:21.206
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.viewmodel.SteppingController$3@1f7d906): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-step 1
+Error message from debugger back end:
+Cannot find bounds of current function java.lang.Exception: Cannot find bounds of current function' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-13 11:38:21.206
+!MESSAGE Failed to execute MI command:
+-exec-step 1
+Error message from debugger back end:
+Cannot find bounds of current function
+!STACK 0
+java.lang.Exception: Cannot find bounds of current function
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-13 11:38:21.990
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.viewmodel.SteppingController$3@1ee357a): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-next 1
+Error message from debugger back end:
+Cannot find bounds of current function java.lang.Exception: Cannot find bounds of current function' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-13 11:38:21.990
+!MESSAGE Failed to execute MI command:
+-exec-next 1
+Error message from debugger back end:
+Cannot find bounds of current function
+!STACK 0
+java.lang.Exception: Cannot find bounds of current function
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-13 11:38:22.766
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.viewmodel.SteppingController$3@12d6405): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-step 1
+Error message from debugger back end:
+Cannot find bounds of current function java.lang.Exception: Cannot find bounds of current function' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-13 11:38:22.766
+!MESSAGE Failed to execute MI command:
+-exec-step 1
+Error message from debugger back end:
+Cannot find bounds of current function
+!STACK 0
+java.lang.Exception: Cannot find bounds of current function
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+
+!ENTRY org.eclipse.debug.core 4 2 2015-01-13 11:38:48.762
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.embsysregview.views.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:361)
+	at org.eclipse.cdt.embsysregview.views.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:201)
+	at org.eclipse.cdt.embsysregview.views.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:211)
+	at org.eclipse.cdt.embsysregview.views.GDBEventListener.readMemory(GDBEventListener.java:56)
+	at org.eclipse.cdt.embsysregview.views.TreeRegister.readValue(TreeRegister.java:154)
+	at org.eclipse.cdt.embsysregview.views.EmbSysRegView.updateTreeFields(EmbSysRegView.java:867)
+	at org.eclipse.cdt.embsysregview.views.EmbSysRegView.updateTreeFields(EmbSysRegView.java:872)
+	at org.eclipse.cdt.embsysregview.views.EmbSysRegView.updateTreeFields(EmbSysRegView.java:872)
+	at org.eclipse.cdt.embsysregview.views.EmbSysRegView.updateTreeFields(EmbSysRegView.java:872)
+	at org.eclipse.cdt.embsysregview.views.EmbSysRegView.gdbSuspendListener(EmbSysRegView.java:903)
+	at org.eclipse.cdt.embsysregview.views.GDBEventListener.handleDebugEvents(GDBEventListener.java:108)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1143)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:407)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.debug.core 4 125 2015-01-13 11:38:48.765
+!MESSAGE An exception occurred while dispatching debug events.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.embsysregview.views.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:361)
+	at org.eclipse.cdt.embsysregview.views.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:201)
+	at org.eclipse.cdt.embsysregview.views.GDBSessionTranslator.readMemory(GDBSessionTranslator.java:211)
+	at org.eclipse.cdt.embsysregview.views.GDBEventListener.readMemory(GDBEventListener.java:56)
+	at org.eclipse.cdt.embsysregview.views.TreeRegister.readValue(TreeRegister.java:154)
+	at org.eclipse.cdt.embsysregview.views.EmbSysRegView.updateTreeFields(EmbSysRegView.java:867)
+	at org.eclipse.cdt.embsysregview.views.EmbSysRegView.updateTreeFields(EmbSysRegView.java:872)
+	at org.eclipse.cdt.embsysregview.views.EmbSysRegView.updateTreeFields(EmbSysRegView.java:872)
+	at org.eclipse.cdt.embsysregview.views.EmbSysRegView.updateTreeFields(EmbSysRegView.java:872)
+	at org.eclipse.cdt.embsysregview.views.EmbSysRegView.gdbSuspendListener(EmbSysRegView.java:903)
+	at org.eclipse.cdt.embsysregview.views.GDBEventListener.handleDebugEvents(GDBEventListener.java:108)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1143)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:407)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.debug.core 4 120 2015-01-13 12:49:07.149
+!MESSAGE Variable references empty selection: ${project_name}
+!SESSION 2015-01-13 12:51:56.872 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 12:53:03.496
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsets in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 12:53:03.499
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsetsTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 12:53:03.499
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytes in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 12:53:03.499
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytesTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 12:53:03.499
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddress in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 12:53:03.499
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddressTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-13 13:14:18.880
+!MESSAGE Breakpoint already removed
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2015-01-13 13:14:18.880
+!MESSAGE Breakpoint already removed
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-13 13:14:18.907
+!MESSAGE Breakpoint already removed
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2015-01-13 13:14:18.907
+!MESSAGE Breakpoint already removed
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-13 13:14:18.907
+!MESSAGE Breakpoint already removed
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2015-01-13 13:14:18.907
+!MESSAGE Breakpoint already removed
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-13 13:14:18.907
+!MESSAGE Breakpoint already removed
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2015-01-13 13:14:18.907
+!MESSAGE Breakpoint already removed
