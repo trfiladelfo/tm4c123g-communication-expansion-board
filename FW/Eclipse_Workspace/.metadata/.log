@@ -6791,3 +6791,349 @@ Command-line arguments:  -os linux -ws gtk -arch x86
 !MESSAGE Breakpoint already removed
 !SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2015-01-13 13:14:18.907
 !MESSAGE Breakpoint already removed
+!SESSION 2015-01-13 14:47:54.156 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-01-13 14:53:19.437
+!MESSAGE Indexed 'CAN_drv_TX_example' (5 sources, 26 headers) in 1.67 sec: 698 declarations; 5,443 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-01-13 14:53:38.340
+!MESSAGE Indexed 'CAN_drv_RX_example' (5 sources, 26 headers) in 0.82 sec: 698 declarations; 5,443 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+!SESSION 2015-01-13 17:57:56.286 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-01-13 17:58:02.421
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 19:44:46.635
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsets in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 19:44:46.687
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsetsTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 19:44:46.687
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytes in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 19:44:46.687
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytesTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 19:44:46.688
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddress in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-13 19:44:46.688
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddressTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.debug.core 4 120 2015-01-13 19:47:16.786
+!MESSAGE Variable references empty selection: ${project_name}
+
+!ENTRY org.eclipse.debug.core 4 120 2015-01-13 19:47:36.721
+!MESSAGE Variable references empty selection: ${project_name}
+
+!ENTRY org.eclipse.debug.core 4 120 2015-01-13 21:42:52.779
+!MESSAGE Variable references empty selection: ${project_name}
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2015-01-14 20:08:37.146
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Connection is shut down ,Connection is shut down
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:115)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:231)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.cdt.launch.internal.MultiLaunchConfigurationDelegate.launch(MultiLaunchConfigurationDelegate.java:394)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Connection is shut down
+Contains: Connection is shut down
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10001 2015-01-14 20:08:37.404
+!MESSAGE Connection is shut down ,Connection is shut down
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10001 2015-01-14 20:08:37.404
+!MESSAGE Connection is shut down
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10001 2015-01-14 20:08:37.404
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2015-01-14 20:08:37.516
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+target extended-remote :3333
+Error message from debugger back end:
+:3333: Connection timed out. ,Failed to execute MI command:
+monitor reset halt
+Error message from debugger back end:
+"monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:115)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:231)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.cdt.launch.internal.MultiLaunchConfigurationDelegate.launch(MultiLaunchConfigurationDelegate.java:394)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Failed to execute MI command:
+target extended-remote :3333
+Error message from debugger back end:
+:3333: Connection timed out.
+java.lang.Exception: :3333: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+Contains: Failed to execute MI command:
+monitor reset halt
+Error message from debugger back end:
+"monitor" command not supported by this target.
+java.lang.Exception: "monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2015-01-14 20:08:37.517
+!MESSAGE Failed to execute MI command:
+target extended-remote :3333
+Error message from debugger back end:
+:3333: Connection timed out. ,Failed to execute MI command:
+monitor reset halt
+Error message from debugger back end:
+"monitor" command not supported by this target.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-14 20:08:37.517
+!MESSAGE Failed to execute MI command:
+target extended-remote :3333
+Error message from debugger back end:
+:3333: Connection timed out.
+!STACK 0
+java.lang.Exception: :3333: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-14 20:08:37.517
+!MESSAGE Failed to execute MI command:
+monitor reset halt
+Error message from debugger back end:
+"monitor" command not supported by this target.
+!STACK 0
+java.lang.Exception: "monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2015-01-14 20:09:24.183
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+target extended-remote :3333
+Error message from debugger back end:
+:3333: Connection timed out. ,Failed to execute MI command:
+monitor reset halt
+Error message from debugger back end:
+"monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:115)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:231)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.cdt.launch.internal.MultiLaunchConfigurationDelegate.launch(MultiLaunchConfigurationDelegate.java:394)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Failed to execute MI command:
+target extended-remote :3333
+Error message from debugger back end:
+:3333: Connection timed out.
+java.lang.Exception: :3333: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+Contains: Failed to execute MI command:
+monitor reset halt
+Error message from debugger back end:
+"monitor" command not supported by this target.
+java.lang.Exception: "monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2015-01-14 20:09:24.187
+!MESSAGE Failed to execute MI command:
+target extended-remote :3333
+Error message from debugger back end:
+:3333: Connection timed out. ,Failed to execute MI command:
+monitor reset halt
+Error message from debugger back end:
+"monitor" command not supported by this target.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-14 20:09:24.187
+!MESSAGE Failed to execute MI command:
+target extended-remote :3333
+Error message from debugger back end:
+:3333: Connection timed out.
+!STACK 0
+java.lang.Exception: :3333: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-14 20:09:24.187
+!MESSAGE Failed to execute MI command:
+monitor reset halt
+Error message from debugger back end:
+"monitor" command not supported by this target.
+!STACK 0
+java.lang.Exception: "monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-14 20:12:19.148
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.viewmodel.SteppingController$3@81a5fb): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-14 20:12:19.148
+!MESSAGE Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n
+!STACK 0
+java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-14 20:12:20.849
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.viewmodel.SteppingController$3@1023ff2): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-14 20:12:20.849
+!MESSAGE Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n
+!STACK 0
+java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-14 20:12:51.716
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.viewmodel.SteppingController$3@7e7931): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-14 20:12:51.716
+!MESSAGE Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n
+!STACK 0
+java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-14 20:12:53.497
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.viewmodel.SteppingController$3@12fccf3): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-14 20:12:53.497
+!MESSAGE Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n
+!STACK 0
+java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-14 20:12:54.137
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.viewmodel.SteppingController$3@16e813a): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-14 20:12:54.137
+!MESSAGE Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n
+!STACK 0
+java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-14 20:12:54.961
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.viewmodel.SteppingController$3@c9935): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-14 20:12:54.961
+!MESSAGE Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n
+!STACK 0
+java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-14 20:16:20.442
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.viewmodel.SteppingController$3@1c6d42a): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-14 20:16:20.443
+!MESSAGE Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n
+!STACK 0
+java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-01-14 20:16:21.368
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.viewmodel.SteppingController$3@1b6a85a): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-14 20:16:21.368
+!MESSAGE Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n
+!STACK 0
+java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nError accessing memory address 0xfffffff9: Unknown error -1.\n
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+!SESSION 2015-01-14 20:22:01.078 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-14 20:22:19.854
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsets in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-14 20:22:19.857
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsetsTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-14 20:22:19.857
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytes in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-14 20:22:19.857
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytesTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-14 20:22:19.857
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddress in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-14 20:22:19.857
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddressTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
