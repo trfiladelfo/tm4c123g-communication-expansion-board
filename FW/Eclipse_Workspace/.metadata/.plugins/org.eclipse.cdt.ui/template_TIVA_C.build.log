@@ -1,6 +1,7 @@
-18:00:55 **** Incremental Build of configuration Debug for project template_TIVA_C ****
-make all 
-make: Nothing to be done for `all'.
+03:26:05 **** Clean-only build of configuration Debug for project template_TIVA_C ****
+make clean 
+rm -rf  ./main.o ./startup_gcc.o  ./main.d ./startup_gcc.d  template_TIVA_C.elf
+ 
 
-18:00:55 Build Finished (took 66ms)
+03:26:05 Build Finished (took 237ms)
 
