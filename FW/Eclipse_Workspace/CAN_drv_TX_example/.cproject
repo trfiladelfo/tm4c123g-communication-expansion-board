@@ -43,6 +43,7 @@
 							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.1358925508" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker">
 								<option id="gnu.c.link.option.libs.1990073579" name="Libraries (-l)" superClass="gnu.c.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="driver"/>
+									<listOptionValue builtIn="false" value="m"/>
 								</option>
 								<option id="gnu.c.link.option.paths.840300981" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="/home/luca/src/stellaris/Tivaware/driverlib/gcc"/>
@@ -139,7 +140,7 @@
 			<resource resourceType="PROJECT" workspacePath="/CAN_drv_example"/>
 		</configuration>
 		<configuration configurationName="Debug">
-			<resource resourceType="PROJECT" workspacePath="/CAN_drv_example"/>
+			<resource resourceType="PROJECT" workspacePath="/CAN_drv_TX_example"/>
 		</configuration>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>

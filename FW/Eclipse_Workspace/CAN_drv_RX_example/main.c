@@ -19,29 +19,10 @@
 
 #define SYSTICK_PERIOD 	50000000	// the number of clock ticks in each period of the SysTick counter
 
-#define TURNON_RED_LED()		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_1 )
-#define TURNON_BLUE_LED()		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_2 )
-#define TURNON_GREEN_LED()		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_3 )
-
-#define TURNON_YELLOW_LED()		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, 			\
-																						GPIO_PIN_1 | GPIO_PIN_3 )
-
-#define TURNON_MAGENTA_LED()		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, 		\
-																						GPIO_PIN_1 | GPIO_PIN_2 )
-
-#define TURNON_CYAN_LED()		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, 			\
-																						GPIO_PIN_2 | GPIO_PIN_3 )
-
-#define TURNON_WHITE_LED()		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3,				\
-														  	  	 	 	   GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 )
-#define TURNOFF_ALL_LED()		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3,				\
-																											  0 )
-
-
 volatile uint8_t rxFlag;
 volatile uint8_t err_flag=0;
 
-
+/*
 void SysTickIntHandler()
 {
 	uint32_t colour[3];
@@ -68,7 +49,7 @@ void SysTickIntHandler()
 
 	led_sts^=true;
 }
-
+*/
 
 uint32_t CAN_status;
 
@@ -108,7 +89,7 @@ int main(void)
 	// enable peripherals to operate when CPU is in sleep:
 	ROM_SysCtlPeripheralClockGating(true);
 
-
+/*
 	// enable SysTick Timer in order to handle power-on LED flashing
 	SysTickEnable();
 	// set-up SysTick period
@@ -117,24 +98,7 @@ int main(void)
 	SysTickIntRegister(SysTickIntHandler);
 	// enable SysTick interrupt
 	SysTickIntEnable();
-
-
-	// enable all of the GPIOs:
-	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
-	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
-	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOC);
-	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOD);
-	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);
-	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
-	ROM_SysCtlPeripheralSleepEnable(SYSCTL_PERIPH_GPIOA);
-	ROM_SysCtlPeripheralSleepEnable(SYSCTL_PERIPH_GPIOB);
-	ROM_SysCtlPeripheralSleepEnable(SYSCTL_PERIPH_GPIOC);
-	ROM_SysCtlPeripheralSleepEnable(SYSCTL_PERIPH_GPIOD);
-	ROM_SysCtlPeripheralSleepEnable(SYSCTL_PERIPH_GPIOE);
-	ROM_SysCtlPeripheralSleepEnable(SYSCTL_PERIPH_GPIOF);
-
-	// setup pins connected to RGB LED:
-	ROM_GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3);
+*/
 
 	//initialize UART console for debugging purposes
 	InitConsole();
@@ -158,7 +122,7 @@ int main(void)
 	uint32_t colour[3];
 	float intensity;
 
-	UARTprintf("MCU is running");
+	UARTprintf("MCU is running: waiting for CAN packets\n\r");
 
 	//
     // Loop forever.
@@ -191,7 +155,8 @@ int main(void)
     	if(err_flag)
     	{
     		char Decoded_ControllerStsReg[30];
-    		TURNOFF_ALL_LED();
+    		RGBSet(0,0);
+
 
     		if(err_flag==1)
     			UARTprintf("\%s\n\r", app_can_DecodeControllerStsReg(CAN_status,Decoded_ControllerStsReg));

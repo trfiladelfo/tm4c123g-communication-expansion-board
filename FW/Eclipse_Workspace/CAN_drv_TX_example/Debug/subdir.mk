@@ -7,22 +7,19 @@ C_SRCS += \
 ../app_can.c \
 ../main.c \
 ../my_uart.c \
-../startup_gcc.c \
-../uartstdio.c 
+../startup_gcc.c 
 
 OBJS += \
 ./app_can.o \
 ./main.o \
 ./my_uart.o \
-./startup_gcc.o \
-./uartstdio.o 
+./startup_gcc.o 
 
 C_DEPS += \
 ./app_can.d \
 ./main.d \
 ./my_uart.d \
-./startup_gcc.d \
-./uartstdio.d 
+./startup_gcc.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

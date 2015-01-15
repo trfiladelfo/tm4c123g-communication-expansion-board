@@ -139,7 +139,7 @@
 			<resource resourceType="PROJECT" workspacePath="/CAN_drv_example"/>
 		</configuration>
 		<configuration configurationName="Debug">
-			<resource resourceType="PROJECT" workspacePath="/CAN_drv_example"/>
+			<resource resourceType="PROJECT" workspacePath="/CAN_drv_RX_example"/>
 		</configuration>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>

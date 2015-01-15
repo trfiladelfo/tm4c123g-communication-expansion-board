@@ -1,6 +1,7 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include <math.h>
 
 #include "my_uart.h"
 #include "app_can.h"
@@ -14,76 +15,70 @@
 #include "driverlib/can.h"
 #include "driverlib/systick.h"
 
-#include "utils/uartstdio.h"
+#include "drivers/uartstdio.h"
+#include "drivers/rgb.h"
 
-#define SYSTICK_PERIOD 	50000000	// the number of clock ticks in each period of the SysTick counter
+#define PI 3.14159265359f
+#define SYSTICK_PERIOD 		50000000	// the number of clock ticks in each period of the SysTick counter
+#define SYSCLOCK			80000000	// 80 MHz
 
-#define TURNON_RED_LED()		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_1 )
-#define TURNON_BLUE_LED()		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_2 )
-#define TURNON_GREEN_LED()		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_3 )
+volatile uint8_t err_flag=0;
 
-#define TURNON_YELLOW_LED()		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, 			\
-																						GPIO_PIN_1 | GPIO_PIN_3 )
+void delay(unsigned int milliseconds) {
+	SysCtlDelay((SYSCLOCK / 3) * (milliseconds / 1000.0f));
+}
 
-#define TURNON_MAGENTA_LED()		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, 		\
-																						GPIO_PIN_1 | GPIO_PIN_2 )
-
-#define TURNON_CYAN_LED()		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, 			\
-																						GPIO_PIN_2 | GPIO_PIN_3 )
-
-#define TURNON_WHITE_LED()		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3,				\
-														  	  	 	 	   GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 )
-#define TURNOFF_ALL_LED()		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3,				\
-																											  0 )
-
-
-uint32_t count=0;
-uint8_t err_flag=0;
-
-//declaration of CAN msgs
-tCANMsgObject msg; // the CAN message object
-uint32_t msgData = 0; // the message data is four bytes long which we can allocate as an int32
-uint8_t *msgDataPtr = (uint8_t *)&msgData; // make a pointer to msgData so we can access individual bytes
-
+/*
 void SysTickIntHandler()
 {
+	uint32_t colour[3];
+	float intensity;
+
 	static bool led_sts=false;
+	if(led_sts)
+	{
+		colour[0] = 255 * 0xFF;
+		colour[1] = 255 * 0xFF;
+		colour[2] = 255 * 0xFF;
+		intensity = 1.0f;
+		RGBSet(colour, intensity);
+		UARTprintf(".");
+	}
+	else
+	{
+		colour[0] = 0;
+		colour[1] = 0;
+		colour[2] = 0;
+		intensity = 0;
+		RGBSet(colour, intensity);
+	}
+
 	led_sts^=true;
-	if(led_sts) TURNON_CYAN_LED();
-	else TURNOFF_ALL_LED();
 }
+*/
+
+uint32_t CAN_status;
 
 void CANIntHandler ()
 {
-	char Decoded_ControllerStsReg[30];
-
-	TURNOFF_ALL_LED();
-
-	uint32_t CAN_status = CANIntStatus(CAN0_BASE,CAN_INT_STS_CAUSE);
+	CAN_status = CANIntStatus(CAN0_BASE,CAN_INT_STS_CAUSE);
 
 	if(CAN_status == CAN_INT_INTID_STATUS)							// controller status interrupt
 	{
-		CAN_status = CANStatusGet(CAN0_BASE,CAN_STS_CONTROL);		// read back error bits and print it
-		UARTprintf("\%s\n\r", app_can_DecodeControllerStsReg(CAN_status,Decoded_ControllerStsReg));
 		err_flag = 1;
-		TURNON_RED_LED();											//turn on RED led to indicate ERROR!
-	}
-	else if(CAN_status == 1)										// message object 1
-	{
-		CANIntClear(CAN0_BASE,1);									// clear interrupt
-		err_flag = 0;												// clear any error flags
-		TURNON_GREEN_LED();											// turn on GREEN led to indicate successful
-																	// msg transmission
-		UARTprintf("CAN msg tx: \%02X-\%02X-\%02X-\%02X\n\r",msgDataPtr[0],msgDataPtr[1],msgDataPtr[2],msgDataPtr[3]);
-	}
-	else															// should never happen
-	{
-		UARTprintf("Unexpected CAN bus interrupt\n\r");
-		TURNON_RED_LED();											//turn on RED led to indicate ERROR!
+		CAN_status = CANStatusGet(CAN0_BASE,CAN_STS_CONTROL);		// read back error bits and print it
 	}
 
-	SysCtlDelay(20000000);
-	TURNOFF_ALL_LED();
+	else if(CAN_status == 1)										// message object 1
+	{
+		err_flag = 0;												// clear any error flags
+		CANIntClear(CAN0_BASE,1);									// clear interrupt
+	}
+
+	else															// should never happen
+	{
+		err_flag = 2 ;
+	}
 }
 
 
@@ -95,6 +90,7 @@ int main(void)
 	// enable peripherals to operate when CPU is in sleep:
 	ROM_SysCtlPeripheralClockGating(true);
 
+/*
 	// enable SysTick Timer in order to handle power-on LED flashing
 	SysTickEnable();
 	// set-up SysTick period
@@ -103,48 +99,65 @@ int main(void)
 	SysTickIntRegister(SysTickIntHandler);
 	// enable SysTick interrupt
 	SysTickIntEnable();
-
-	// enable all of the GPIOs:
-	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
-	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
-	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOC);
-	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOD);
-	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);
-	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
-	ROM_SysCtlPeripheralSleepEnable(SYSCTL_PERIPH_GPIOA);
-	ROM_SysCtlPeripheralSleepEnable(SYSCTL_PERIPH_GPIOB);
-	ROM_SysCtlPeripheralSleepEnable(SYSCTL_PERIPH_GPIOC);
-	ROM_SysCtlPeripheralSleepEnable(SYSCTL_PERIPH_GPIOD);
-	ROM_SysCtlPeripheralSleepEnable(SYSCTL_PERIPH_GPIOE);
-	ROM_SysCtlPeripheralSleepEnable(SYSCTL_PERIPH_GPIOF);
-
-	// setup pins connected to RGB LED:
-	ROM_GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3);
+*/
 
 	//initialize UART console for debugging purposes
 	InitConsole();
+
 	//initialize CAN controller
 	app_can_init();
 
+	// Set up LED driver
+	RGBInit(1);
+
+	//declaration of CAN msgs
+	tCANMsgObject msg; 			// the CAN message object
+	uint64_t msgData = 0; 		// the message data could be up to eight bytes long which we can allocate as an int64
+	uint8_t *msgDataPtr = (uint8_t *)&msgData; 		// make a pointer to msgData so we can access individual bytes
+
 	// Set up of CAN msg object
+	msgData = 0;
 	msg.ui32MsgID = 1;
 	msg.ui32MsgIDMask = 0;
 	msg.ui32Flags = MSG_OBJ_TX_INT_ENABLE;
 	msg.ui32MsgLen = sizeof(msgDataPtr);
 	msg.pui8MsgData = msgDataPtr;
 
+	uint32_t t = 0; // loop counter
+	float freq = 0.3; // frequency scaler
+
+	UARTprintf("MCU is running");
+
 	//
     // Loop forever.
     //
     while(1)
     {
+		// set up next colour (scale sinf (0-1) to 0-255)
+		msgDataPtr[0] = (0.5 + 0.5*sinf(t*freq)) * 0xFF;
+		msgDataPtr[1] = (0.5 + 0.5*sinf(t*freq + (2*PI/3))) * 0xFF; 	// 120 degrees out of phase
+		msgDataPtr[2] = (0.5 + 0.5*sinf(t*freq + (4*PI/3))) * 0xFF; 	// 240 degrees out of phase
+		msgDataPtr[3] = 128; 											// 50% intensity
 
-    	msgDataPtr[0]=++count;
-    	msgDataPtr[1]=++count;
-    	msgDataPtr[2]=++count;
-    	msgDataPtr[3]=++count;
+		// write colour to UART for debugging
+		UARTprintf("Sending colour\tr: %d\tg: %d\tb: %d\n", msgDataPtr[0], msgDataPtr[1], msgDataPtr[2]);
+		// send CAN message
+		CANMessageSet(CAN0_BASE, 1, &msg, MSG_OBJ_TYPE_TX); 			// send as msg object 1
 
-//    	CANMessageSet(CAN0_BASE, 1, &msg, MSG_OBJ_TYPE_TX); // send as msg object 1
+		delay(100); 													// wait 100ms
+
+    	if(err_flag)
+    	{
+    		char Decoded_ControllerStsReg[30];
+    		RGBSet(0,0);
+
+    		if(err_flag==1)
+    			UARTprintf("\%s\n\r", app_can_DecodeControllerStsReg(CAN_status,Decoded_ControllerStsReg));
+    		else
+    			UARTprintf("Unexpected CAN bus interrupt\n\r");
+    	}
+
+		t++; // overflow is fine
     }
 
 return 0;
