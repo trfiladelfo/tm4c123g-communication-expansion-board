@@ -32,7 +32,9 @@ void delay(unsigned int milliseconds) {
 	SysCtlDelay((SYSCLOCK / 3) * (milliseconds / 1000.0f));
 }
 
-
+//*******************************************************************************
+//						CAN ISR
+//*******************************************************************************
 void CANIntHandler ()
 {									// Read the CAN interrupt status to find the cause of the interrupt
 	CAN_status = CANIntStatus(CAN0_BASE,CAN_INT_STS_CAUSE);
@@ -65,20 +67,17 @@ int main(void)
 //*******************************************************************************
 	// setup the system clock to run at 80 MHz from the external crystal:
 	ROM_SysCtlClockSet(SYSCTL_SYSDIV_2_5 | SYSCTL_USE_PLL | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
-
 	// enable peripherals to operate when CPU is in sleep:
 	ROM_SysCtlPeripheralClockGating(true);
-
 	//initialize UART console for debugging purposes
 	InitConsole();
-
 	//initialize CAN controller
 	app_can_init();
-
 	// Set up LED driver
 	RGBInit(1);
 
-	//declaration of CAN msgs
+/*_______________________INITIALIZATION OF MESSAGE OBJECT_______________________*/
+
 	tCANMsgObject msg; 								// the CAN message object
 	uint64_t msgData = 0; 							// the message data could be up to eight bytes long which we can allocate as an int64
 	uint8_t *msgDataPtr = (uint8_t *)&msgData; 		// make a pointer to msgData so we can access individual bytes
@@ -90,6 +89,7 @@ int main(void)
 	msg.ui32Flags = MSG_OBJ_TX_INT_ENABLE;
 	msg.ui32MsgLen = sizeof(msgDataPtr);
 	msg.pui8MsgData = msgDataPtr;
+/*______________________________________________________________________________*/
 
 	uint32_t t = 0; // loop counter
 	float freq = 0.3; // frequency scaler
