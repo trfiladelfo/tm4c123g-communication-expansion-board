@@ -26,7 +26,7 @@
 	<section name="org.eclipse.debug.ui.LAUNCH_CONFIGURATIONS_DIALOG_SECTION">
 		<item value="973" key="DIALOG_WIDTH"/>
 		<item value="org.eclipse.ui.externaltools.ProgramLaunchConfigurationType, org.eclipse.cdt.debug.gdbjtag.launchConfigurationType, org.eclipse.cdt.launch.launchGroup, " key="org.eclipse.debug.ui.EXPANDED_NODES"/>
-		<item value="650" key="DIALOG_HEIGHT"/>
+		<item value="618" key="DIALOG_HEIGHT"/>
 		<item value="359" key="org.eclipse.debug.ui.DIALOG_SASH_WEIGHTS_1"/>
 		<item value="640" key="org.eclipse.debug.ui.DIALOG_SASH_WEIGHTS_2"/>
 		<item value="1|Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>

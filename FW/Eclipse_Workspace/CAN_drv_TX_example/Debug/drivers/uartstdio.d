@@ -1,4 +1,4 @@
-uartstdio.d: ../uartstdio.c \
+drivers/uartstdio.d: ../drivers/uartstdio.c \
  /home/luca/src/stellaris/Tivaware/inc/hw_ints.h \
  /home/luca/src/stellaris/Tivaware/inc/hw_memmap.h \
  /home/luca/src/stellaris/Tivaware/inc/hw_types.h \

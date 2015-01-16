@@ -6,6 +6,8 @@ main.d: ../main.c ../my_uart.h ../app_can.h \
  /home/luca/src/stellaris/Tivaware/driverlib/gpio.h \
  /home/luca/src/stellaris/Tivaware/driverlib/can.h \
  /home/luca/src/stellaris/Tivaware/driverlib/systick.h \
+ /home/luca/src/stellaris/Tivaware/driverlib/timer.h \
+ /home/luca/src/stellaris/Tivaware/driverlib/interrupt.h \
  ../drivers/uartstdio.h ../drivers/rgb.h
 
 ../my_uart.h:
@@ -25,6 +27,10 @@ main.d: ../main.c ../my_uart.h ../app_can.h \
 /home/luca/src/stellaris/Tivaware/driverlib/can.h:
 
 /home/luca/src/stellaris/Tivaware/driverlib/systick.h:
+
+/home/luca/src/stellaris/Tivaware/driverlib/timer.h:
+
+/home/luca/src/stellaris/Tivaware/driverlib/interrupt.h:
 
 ../drivers/uartstdio.h:
 

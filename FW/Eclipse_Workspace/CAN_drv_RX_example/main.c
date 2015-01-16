@@ -21,37 +21,7 @@
 
 volatile uint8_t rxFlag;
 volatile uint8_t err_flag=0;
-
-/*
-void SysTickIntHandler()
-{
-	uint32_t colour[3];
-	float intensity;
-
-	static bool led_sts=false;
-	if(led_sts)
-	{
-		colour[0] = 255 * 0xFF;
-		colour[1] = 255 * 0xFF;
-		colour[2] = 255 * 0xFF;
-		intensity = 1.0f;
-		RGBSet(colour, intensity);
-		UARTprintf(".");
-	}
-	else
-	{
-		colour[0] = 0;
-		colour[1] = 0;
-		colour[2] = 0;
-		intensity = 0;
-		RGBSet(colour, intensity);
-	}
-
-	led_sts^=true;
-}
-*/
-
-uint32_t CAN_status;
+volatile uint32_t CAN_status;
 
 void CANIntHandler ()
 {

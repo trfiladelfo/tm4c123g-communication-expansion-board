@@ -102,6 +102,7 @@ SysCtlPeripheralPowerOn(SYSCTL_PERIPH_CAN0);
     	// of interrupt handlers which means the name of the handler is in the vector table of
     	// startup code you must also comment "CANIntRegister(CAN0_BASE, CANIntHandler)".
     CANIntRegister(CAN0_BASE, CANIntHandler); // 	needed only using dynamic vectors
+    IntPrioritySet(INT_CAN0,0x00);
     CANIntEnable(CAN0_BASE, CAN_INT_MASTER | CAN_INT_ERROR | CAN_INT_STATUS);
 
     //18.2.3.2 IntEnable
