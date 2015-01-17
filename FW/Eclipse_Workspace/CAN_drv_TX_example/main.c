@@ -27,6 +27,8 @@
 
 volatile uint8_t err_flag= 0;
 volatile uint32_t CAN_status = 0;
+uint32_t RxCount, TxCount;
+bool ErrCountFlag;
 
 void delay(unsigned int milliseconds) {
 	SysCtlDelay((SYSCLOCK / 3) * (milliseconds / 1000.0f));
@@ -125,7 +127,11 @@ int main(void)
 			UARTprintf("Sending colour\tr: %d\tg: %d\tb: %d\n", msgDataPtr[0], msgDataPtr[1], msgDataPtr[2]);
 			CANMessageSet(CAN0_BASE, 1, &msg, MSG_OBJ_TYPE_TX); 					// send message object 1 as CAN packet
 		}
-
+    	//TODO: only for debug purposes. Comment out if not useful.
+		ErrCountFlag=CANErrCntrGet(CAN0_BASE, &RxCount, &TxCount);			// get the error flag and the error counters
+		UARTprintf("error number on CAN bus: RxCount= \%d; TxCount= \%d; Error flag: %s; t= %d;\n\r",
+					RxCount, TxCount,(ErrCountFlag?"True":"False"),t);		// print error counter
+    	//
 	delay(100); 		// wait 100ms
 	t++; 				// overflow is fine
     }
