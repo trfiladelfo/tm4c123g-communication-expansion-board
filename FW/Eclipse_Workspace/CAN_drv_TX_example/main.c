@@ -30,6 +30,7 @@ volatile uint32_t CAN_status = 0;
 uint32_t RxCount, TxCount;
 bool ErrCountFlag;
 
+
 void delay(unsigned int milliseconds) {
 	SysCtlDelay((SYSCLOCK / 3) * (milliseconds / 1000.0f));
 }
@@ -37,7 +38,7 @@ void delay(unsigned int milliseconds) {
 //*******************************************************************************
 //						CAN ISR
 //*******************************************************************************
-void CANIntHandler ()
+void CANIntHandler()
 {									// Read the CAN interrupt status to find the cause of the interrupt
 	CAN_status = CANIntStatus(CAN0_BASE,CAN_INT_STS_CAUSE);
 	if(CAN_status == CAN_INT_INTID_STATUS)								// controller status interrupt
@@ -47,8 +48,9 @@ void CANIntHandler ()
 		if(CAN_status & (CAN_STATUS_BUS_OFF | CAN_STATUS_EWARN | CAN_STATUS_EPASS | CAN_STATUS_LEC_MASK))
 				{
 					err_flag = 1;										// set the error flag
-					UARTprintf("Device connected on the CAN bus?\n\r");	// hint for connection trouble
+					//UARTprintf("Device connected on the CAN bus?\n\r");	// hint for connection trouble
 				}
+		CANIntDisable(CAN0_BASE,CAN_INT_MASTER | CAN_INT_ERROR | CAN_INT_STATUS);	//disable all CAN0 interrupts
 	}
 	else if(CAN_status == 1)											// message object 1 interrupt
 	{
@@ -58,6 +60,7 @@ void CANIntHandler ()
 	else																// should never happen
 	{
 		err_flag = 2 ;
+		CANIntDisable(CAN0_BASE,CAN_INT_MASTER | CAN_INT_ERROR | CAN_INT_STATUS);	//disable all CAN0 interrupts
 	}
 }
 
@@ -119,10 +122,20 @@ int main(void)
     		char Decoded_ControllerStsReg[30];
     		UARTprintf("BUS cable disconnected ? Please, reconnect...\n\r");							// print an hint
 			UARTprintf("\%s\n\r", app_can_DecodeControllerStsReg(CAN_status,Decoded_ControllerStsReg));	// print errors
+			delay(500);
+    		CANIntEnable(CAN0_BASE,CAN_INT_MASTER | CAN_INT_ERROR | CAN_INT_STATUS);	//	enable all CAN0 interrupts
     	}
-    	else if(err_flag==2) UARTprintf("Unexpected CAN bus interrupt\n\r");		// UNKNOWN ERROR
+    	else if(err_flag==2)
+    	{
+    		UARTprintf("Unexpected CAN bus interrupt\n\r");							// UNKNOWN ERROR
+    		delay(500);
+    		CANIntEnable(CAN0_BASE,CAN_INT_MASTER | CAN_INT_ERROR | CAN_INT_STATUS);	//	enable all CAN0 interrupts
+
+    	}
+
     	else																		// NO ERROR -> TRANSMIT PACKET
 		{
+    		CANIntEnable(CAN0_BASE,CAN_INT_MASTER | CAN_INT_ERROR | CAN_INT_STATUS);//	enable all CAN0 interrupts
 																					// write colour to UART for debugging
 			UARTprintf("Sending colour\tr: %d\tg: %d\tb: %d\n", msgDataPtr[0], msgDataPtr[1], msgDataPtr[2]);
 			CANMessageSet(CAN0_BASE, 1, &msg, MSG_OBJ_TYPE_TX); 					// send message object 1 as CAN packet
@@ -137,3 +150,4 @@ int main(void)
     }
 return 0;
 }
+
