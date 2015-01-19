@@ -21,7 +21,7 @@
 #include "drivers/uartstdio.h"
 #include "drivers/rgb.h"
 
-#define PI 3.14159265359f
+#define PI 					3.14159265359f
 #define SYSTICK_PERIOD 		50000000	// the number of clock ticks in each period of the SysTick counter
 #define SYSCLOCK			80000000	// 80 MHz
 
@@ -128,12 +128,12 @@ int main(void)
 			CANMessageSet(CAN0_BASE, 1, &msg, MSG_OBJ_TYPE_TX); 					// send message object 1 as CAN packet
 		}
     	//TODO: only for debug purposes. Comment out if not useful.
-		ErrCountFlag=CANErrCntrGet(CAN0_BASE, &RxCount, &TxCount);			// get the error flag and the error counters
+		ErrCountFlag=CANErrCntrGet(CAN0_BASE, &RxCount, &TxCount);					// get the error flag and the error counters
 		UARTprintf("error number on CAN bus: RxCount= \%d; TxCount= \%d; Error flag: %s; t= %d;\n\r",
-					RxCount, TxCount,(ErrCountFlag?"True":"False"),t);		// print error counter
+					RxCount, TxCount,(ErrCountFlag?"True":"False"),t);				// print error counter
     	//
 	delay(100); 		// wait 100ms
-	t++; 				// overflow is fine
+	t++;
     }
 return 0;
 }

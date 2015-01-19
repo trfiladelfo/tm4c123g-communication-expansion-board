@@ -3,6 +3,10 @@
  *
  *  Created on: Dec 31, 2014
  *      Author: Luca Buccolini
+ *
+ *  Useful document: 	TivaWare Peripheral Driver Library (SW-TM4C-DRL-UG-2.1.0.12573)
+ *  					The paragraph's numbers in following comments are related to this document.
+ *
  */
 
 
@@ -18,19 +22,6 @@ void app_can_init();
 void CANIntHandler(void);
 
 char* app_can_DecodeControllerStsReg(uint32_t Encoded_ControllerStsReg, char* Decoded_ControllerStsReg);
-
-//#include <stdint.h>
-//
-//extern const char serial_eol[];
-//
-//void serial_wait (void);
-//void serial_send (const char *text);
-//void serial_send_h (const uint8_t *data, uint8_t len);
-//void serial_send_16 (const char *prefix, uint16_t val, const char *suffix);
-//void serial_send_32 (const char *prefix, uint32_t val, const char *suffix);
-//void serial_send_48 (const char *prefix, uint64_t val, const char *suffix);
-
-
 
 #endif /* __APP_CAN_H */
 

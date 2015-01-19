@@ -1,4 +1,4 @@
-01:22:29 **** Incremental Build of configuration Debug for project CAN_drv_TX_example ****
+10:11:01 **** Incremental Build of configuration Debug for project CAN_drv_TX_example ****
 make all 
 Building file: ../main.c
 Invoking: Cross GCC Compiler
