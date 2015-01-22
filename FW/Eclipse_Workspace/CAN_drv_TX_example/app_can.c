@@ -82,7 +82,7 @@ SysCtlPeripheralPowerOn(SYSCTL_PERIPH_CAN0);
 		// It takes five clock cycles after the write to enable a peripheral before
 		// the the peripheral is actually enabled. Uncomment following line if needed.
 		//
-	SysCtlDelay(10);	//it generates a delay by executing (two times) a 3 instruction cycle loop
+	SysCtlDelay(2);	//it generates a delay by executing (two times) a 3 instruction cycle loop
 
 	// 6.2.5.7 CANInit
 		// Initialize the CAN controller
@@ -102,7 +102,6 @@ SysCtlPeripheralPowerOn(SYSCTL_PERIPH_CAN0);
     	// of interrupt handlers which means the name of the handler is in the vector table of
     	// startup code you must also comment "CANIntRegister(CAN0_BASE, CANIntHandler)".
     CANIntRegister(CAN0_BASE, CANIntHandler); // 	needed only using dynamic vectors
-    IntPrioritySet(INT_CAN0,0x00);
     CANIntEnable(CAN0_BASE, CAN_INT_MASTER | CAN_INT_ERROR | CAN_INT_STATUS);
 
     //18.2.3.2 IntEnable
