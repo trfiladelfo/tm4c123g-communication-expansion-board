@@ -21,6 +21,6 @@ void CANIntHandler(void);
 
 char* app_can_DecodeControllerStsReg(uint32_t Encoded_ControllerStsReg, char* Decoded_ControllerStsReg);
 
-void app_can_SendMultipleMsg(uint8_t* pui8_msg, const uint8_t msg_length);
+void app_can_SendMultipleMsg(uint64_t* pui64_msg, const uint16_t msg_length);
 
 #endif /* __APP_CAN_H */

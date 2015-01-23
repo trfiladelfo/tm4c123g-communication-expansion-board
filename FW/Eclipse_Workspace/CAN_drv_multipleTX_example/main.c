@@ -83,7 +83,7 @@ int main(void)
 													// each 8 Byte (each element of the vector) will be tx on a single CAN frame
 	volatile uint16_t i;
 	for(i=0x00;i<0xFF;i++) msgData[i]=0x0101010101010101 * i;
-	uint8_t *msgDataPtr = (uint8_t *)&msgData; 		// make a pointer to msgData so we can access individual bytes
+	uint64_t *msgDataPtr = &msgData; 		// make a pointer to msgData so we can access individual bytes
 
 /*______________________________________________________________________________*/
 

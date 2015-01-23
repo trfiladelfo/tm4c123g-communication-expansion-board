@@ -169,22 +169,29 @@ char* app_can_DecodeControllerStsReg(uint32_t Encoded_ControllerStsReg, char* De
 //*******************************************************************************
 //					app_can_SetupMultipleMsg
 //*******************************************************************************
-void app_can_SendMultipleMsg(uint8_t* pui8_msg, const uint8_t msg_length)	//msg_length is in Byte (max. is 256 Byte)
+void app_can_SendMultipleMsg(uint64_t* pui64_msg, const uint16_t msg_length)	//msg_length is in Byte (max. is 256 Byte)
 {
 	const uint8_t CAN8BytePacketsNo = msg_length/8;		// CAN 8-byte Packets number to transmit
-	const uint8_t CANByteNoLeft = msg_length%8;			// Byte to transmit with last CAN frame which has length < 8Byte
-	tCANMsgObject sCANMsgObject[CAN8BytePacketsNo];		// declaration of "msg_lenght" CANMSGObject structures
+	uint8_t CANByteOnLastPacket = msg_length%8;			// Byte to transmit with last CAN frame (last frame could have length = 8 Bytes)
 
 	uint8_t notExistShortCANPacket;
 	uint8_t MsgVectorLastIndex;
-	if(CANByteNoLeft){									// if you need to transmit a CAN frame with n < 8 bytes of data...
+	if(CANByteOnLastPacket){							// if you need to transmit a CAN frame with n < 8 bytes of data...
 		notExistShortCANPacket = 0;						// exist a CAN frame which data length is < 8 bytes
-		MsgVectorLastIndex = CAN8BytePacketsNo + 1;		// thus last index of the CAN messages vector is  "CAN8BytePacketsNo + 1"
-	}
+		MsgVectorLastIndex = CAN8BytePacketsNo;			// thus last index of the CAN messages vector is  "CAN8BytePacketsNo"
+	}													// note that ther's some 8 bytes packets and further (shorter) packet
+														// if all CAN frame which data length is < 8 bytes
 	else{												// if all CAN frame are 8 Bytes lenght
 		notExistShortCANPacket = 1;						// not exist a CAN frame which data length is < 8 bytes
-		MsgVectorLastIndex = CAN8BytePacketsNo;			// thus last index of the CAN messages vector is  "CAN8BytePacketsNo"
+		MsgVectorLastIndex = CAN8BytePacketsNo - 1;		// thus last index of the CAN messages vector is  "CAN8BytePacketsNo - 1"
 	}
+
+
+	tCANMsgObject sCANMsgObject[CAN8BytePacketsNo];		// declaration of "msg_lenght" CANMSGObject structure
+
+	if(CANByteOnLastPacket==0) CANByteOnLastPacket=8;	// impossible to have ANByteOnLastPacket=0. If it's =0, means
+														// the last packet is an 8-bytes packet.
+														// it occurs when msg_length is an integer multiple of 8: (8,16,24,...).
 
 	/*____________________initialize all but the last CAN Message Objects_________________________*/
 	volatile uint16_t i;
@@ -193,7 +200,7 @@ void app_can_SendMultipleMsg(uint8_t* pui8_msg, const uint8_t msg_length)	//msg_
 			sCANMsgObject[i].ui32MsgIDMask = 0;
 			sCANMsgObject[i].ui32Flags = MSG_OBJ_TX_INT_ENABLE | MSG_OBJ_FIFO;
 			sCANMsgObject[i].ui32MsgLen = 8;
-			sCANMsgObject[i].pui8MsgData = pui8_msg + (i * 8);
+			sCANMsgObject[i].pui8MsgData = (uint8_t*) &pui64_msg[i];
 
 			CANMessageSet(CAN0_BASE,i,&sCANMsgObject[i], MSG_OBJ_TYPE_TX);
 	}
@@ -204,8 +211,8 @@ void app_can_SendMultipleMsg(uint8_t* pui8_msg, const uint8_t msg_length)	//msg_
 	sCANMsgObject[MsgVectorLastIndex].ui32MsgID = CANMSG_ID;
 	sCANMsgObject[MsgVectorLastIndex].ui32MsgIDMask = 0;
 	sCANMsgObject[MsgVectorLastIndex].ui32Flags = MSG_OBJ_TX_INT_ENABLE;
-	sCANMsgObject[MsgVectorLastIndex].ui32MsgLen = CANByteNoLeft;
-	sCANMsgObject[MsgVectorLastIndex].pui8MsgData = pui8_msg + (MsgVectorLastIndex * 8);
+	sCANMsgObject[MsgVectorLastIndex].ui32MsgLen = CANByteOnLastPacket;
+	sCANMsgObject[MsgVectorLastIndex].pui8MsgData = (uint8_t*) &pui64_msg[MsgVectorLastIndex];
 
 	CANMessageSet(CAN0_BASE,MsgVectorLastIndex,&sCANMsgObject[MsgVectorLastIndex], MSG_OBJ_TYPE_TX);
 }

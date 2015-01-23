@@ -11776,3 +11776,93 @@ Contains: Connection is shut down
 !MESSAGE Connection is shut down
 !SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10001 2015-01-21 18:48:24.105
 !MESSAGE Connection is shut down
+!SESSION 2015-01-23 11:20:56.474 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2015-01-23 13:45:30.029
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+target extended-remote :3333
+Error message from debugger back end:
+:3333: Connection timed out. ,Failed to execute MI command:
+monitor reset halt
+Error message from debugger back end:
+"monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:115)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:231)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Failed to execute MI command:
+target extended-remote :3333
+Error message from debugger back end:
+:3333: Connection timed out.
+java.lang.Exception: :3333: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+Contains: Failed to execute MI command:
+monitor reset halt
+Error message from debugger back end:
+"monitor" command not supported by this target.
+java.lang.Exception: "monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2015-01-23 13:45:30.032
+!MESSAGE Failed to execute MI command:
+target extended-remote :3333
+Error message from debugger back end:
+:3333: Connection timed out. ,Failed to execute MI command:
+monitor reset halt
+Error message from debugger back end:
+"monitor" command not supported by this target.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-23 13:45:30.032
+!MESSAGE Failed to execute MI command:
+target extended-remote :3333
+Error message from debugger back end:
+:3333: Connection timed out.
+!STACK 0
+java.lang.Exception: :3333: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2015-01-23 13:45:30.032
+!MESSAGE Failed to execute MI command:
+monitor reset halt
+Error message from debugger back end:
+"monitor" command not supported by this target.
+!STACK 0
+java.lang.Exception: "monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:918)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:747)
+
+!ENTRY org.eclipse.debug.core 4 120 2015-01-23 13:45:33.991
+!MESSAGE Variable references empty selection: ${project_name}
+
+!ENTRY org.eclipse.core.resources 4 368 2015-01-23 13:46:10.445
+!MESSAGE Variable references non-existent resource : ${workspace_loc:/CAN_drv_multipleTX_example/Debug}
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-23 13:46:41.450
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsets in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-23 13:46:41.451
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsetsTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-23 13:46:41.451
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytes in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-23 13:46:41.451
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytesTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-23 13:46:41.451
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddress in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-01-23 13:46:41.451
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddressTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
