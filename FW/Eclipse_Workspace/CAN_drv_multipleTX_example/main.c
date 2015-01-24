@@ -20,7 +20,6 @@
 
 #include "drivers/uartstdio.h"
 
-#define SYSTICK_PERIOD 		50000000	// the number of clock ticks in each period of the SysTick counter
 #define SYSCLOCK			80000000	// 80 MHz
 
 volatile uint32_t CAN_status = 0;
@@ -63,33 +62,37 @@ void CANIntHandler()
 	}
 }
 
+//*******************************************************************************
+//						MAIN
+//*******************************************************************************
 
 int main(void)
 {
-//*******************************************************************************
-//						INITIALIZATION
-//*******************************************************************************
+	//*******************************************************************************
+	//						INITIALIZATION
+	//*******************************************************************************
 	// setup the system clock to run at 80 MHz from the external crystal:
-	ROM_SysCtlClockSet(SYSCTL_SYSDIV_2_5 | SYSCTL_USE_PLL | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
+	SysCtlClockSet(SYSCTL_SYSDIV_2_5 | SYSCTL_USE_PLL | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
 	// enable peripherals to operate when CPU is in sleep:
-	ROM_SysCtlPeripheralClockGating(true);
+	SysCtlPeripheralClockGating(true);
 	//initialize UART console for debugging purposes
 	InitConsole();
 	//initialize CAN controller
 	app_can_init();
 
 /*_______________________INITIALIZATION OF MESSAGE DATA_________________________*/
-	uint64_t msgData [0xFF]; 						// the message data could be up to eight bytes long which we can allocate as an int64
-													// each 8 Byte (each element of the vector) will be tx on a single CAN frame
+	uint64_t msgData [0x100]; 		//256			// the message data could be up to eight bytes long which we can allocate as an int64
+	/*												// each 8 Byte (each element of the vector) will be tx on a single CAN frame
 	volatile uint16_t i;
-	for(i=0x00;i<0xFF;i++) msgData[i]=0x0101010101010101 * i;
+	for(i=0x00;i<32;i++) msgData[i]=0x0101010101010101 * i;
+	*/
 	uint64_t *msgDataPtr = &msgData; 		// make a pointer to msgData so we can access individual bytes
 
 /*______________________________________________________________________________*/
 
 	UARTprintf("MCU is running\n\r");
 
-	app_can_SendMultipleMsg(msgDataPtr,16);
+	//app_can_SendMultipleMsg(msgDataPtr,16);
 
 //*******************************************************************************
 //*******************************************************************************
@@ -98,7 +101,7 @@ int main(void)
 //*******************************************************************************
     while(1)
     {
-	delay(100); 		// wait 100ms
+	delay(500); 		// wait 100ms
 	counter++;
 	UARTprintf(".");
     }
