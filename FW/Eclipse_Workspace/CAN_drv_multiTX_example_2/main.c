@@ -62,7 +62,9 @@ void CANIntHandler()
 	else if(CAN_status)							// message object 1 interrupt CAN_status in range [1-32]
 	{											// number of the highest priority message object that has an interrupt pending
 		err_flag = 0;							// clear any error flags
-		UARTprintf("Transmitted CAN Msg Obj #\%d; Its value is: \%016X\n",CAN_status, msgData[CAN_status-1]);
+		//UARTprintf("Transmitted CAN Msg Obj #%d; Its value is: %016X\n",CAN_status, msgData[CAN_status-1]);
+		UARTprintf("Transmitted CAN Msg Obj %d\n;",CAN_status);
+		delay(200);
 		CANIntClear(CAN0_BASE,CAN_status);		// clear interrupt due to message object#CAN_status [1-32]
 	}
 	else																			// should never happen

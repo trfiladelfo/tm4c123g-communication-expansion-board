@@ -57,9 +57,9 @@ InitConsole(void)
     GPIOPinTypeUART(GPIO_PORTB_BASE, GPIO_PIN_0 | GPIO_PIN_1);
 
     //
-    // Initialize the UART1 for console I/O.
+    // Initialize the UART1 for console I/O @ 921600 bps.
     //
-    UARTStdioConfig(1, 115200, 80000000);
+    UARTStdioConfig(1, 921600, 80000000);
 }
 
 

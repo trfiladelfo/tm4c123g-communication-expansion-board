@@ -32,17 +32,23 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="/home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/CAN_drv_multiTX_example_2/main.c" title="main.c" tooltip="CAN_drv_multiTX_example_2/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CAN_drv_multiTX_example_2/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2732" selectionTopPixel="764"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5836" selectionTopPixel="1518"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="app_can.c" partName="app_can.c" path="/home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/CAN_drv_multiTX_example_2/app_can.c" title="app_can.c" tooltip="CAN_drv_multiTX_example_2/app_can.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CAN_drv_multiTX_example_2/app_can.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9928" selectionTopPixel="2873"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="558" selectionTopPixel="2674"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="my_uart.c" partName="my_uart.c" path="/home/luca/Desktop/Working_Copy_FW/Eclipse_Workspace/CAN_drv_multiTX_example_2/my_uart.c" title="my_uart.c" tooltip="CAN_drv_multiTX_example_2/my_uart.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CAN_drv_multiTX_example_2/my_uart.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1544" selectionTopPixel="451"/>
 </editor>
 </editors>
 <views>
@@ -365,18 +371,27 @@
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.cdt.dsf.debug.ui.disassembly.view"/>
 <fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.7497006" ratioLeft="1252" ratioRight="418" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.7497006" ratioLeft="1252" ratioRight="418" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.73137695" ratioLeft="648" ratioRight="238" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.751693" ratioLeft="666" ratioRight="220" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.cdt.debug.ui.executablesView" label="Executables"/>
@@ -385,7 +400,8 @@
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
@@ -394,23 +410,29 @@
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.503876" ratioLeft="325" ratioRight="320" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.69502693" ratioLeft="1160" ratioRight="509" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.cdt.dsf.debug.ui.disassembly.view" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info part="org.eclipse.ui.editorss" ratio="0.40620154" ratioLeft="262" ratioRight="383" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.69502693" ratioLeft="1160" ratioRight="509" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.cdt.dsf.debug.ui.disassembly.view" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="Disassembly"/>
 <page content="org.eclipse.cdt.visualizer.view" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="835" ratioRight="835" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.BreakpointView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="835" ratioRight="835" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.ExpressionView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="Registers"/>
 <page content="org.eclipse.debug.ui.ModuleView" label="Modules"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
 <page content="org.eclipse.cdt.debug.ui.SignalsView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
@@ -426,156 +448,139 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/CAN_drv_multiTX_example_2/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/CAN_drv_multiTX_example_2/startup_gcc.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/CAN_drv_multiTX_example_2/drivers/uartstdio.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/CAN_drv_multiTX_example_2/app_can.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/CAN_drv_multiTX_example_2/app_can.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/CAN_drv_multiTX_example_2/app_can.h"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/luca/src/stellaris/Tivaware/driverlib/can.h" project="CAN_drv_multiTX_example_2"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/CAN_drv_multiTX_example_2/app_can.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/CAN_drv_multiTX_example_2/my_uart.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/CAN_drv_multiTX_example_2/my_uart.c"/>
 </editors>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2653" y="0"/>
-</item>
-<item historyLabel="startup_gcc.c" index="1">
-<position info="not_deleted" x="16184" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="3055" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="3055" y="0"/>
+<position info="not_deleted" x="5412" y="0"/>
 </item>
 <item historyLabel="app_can.c" index="2">
-<position info="not_deleted" x="9004" y="0"/>
-</item>
-<item historyLabel="startup_gcc.c" index="1">
-<position info="not_deleted" x="16184" y="0"/>
+<position info="not_deleted" x="7196" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="3055" y="0"/>
+<position info="not_deleted" x="5822" y="0"/>
+</item>
+<item historyLabel="app_can.c" index="2">
+<position info="not_deleted" x="7196" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="3055" y="0"/>
+<position info="not_deleted" x="5412" y="0"/>
 </item>
-<item historyLabel="startup_gcc.c" index="1">
-<position info="not_deleted" x="15695" y="0"/>
+<item historyLabel="app_can.c" index="2">
+<position info="not_deleted" x="7196" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="3055" y="0"/>
+<position info="not_deleted" x="5412" y="0"/>
 </item>
-<item historyLabel="startup_gcc.c" index="1">
-<position info="not_deleted" x="15695" y="0"/>
+<item historyLabel="app_can.c" index="2">
+<position info="not_deleted" x="7196" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="5417" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3394" y="0"/>
+</item>
+<item historyLabel="app_can.c" index="2">
+<position info="not_deleted" x="7069" y="83"/>
+</item>
+<item historyLabel="app_can.c" index="2">
+<position info="not_deleted" x="9932" y="0"/>
+</item>
+<item historyLabel="app_can.c" index="2">
+<position info="not_deleted" x="7197" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2491" y="0"/>
+</item>
+<item historyLabel="app_can.c" index="2">
+<position info="not_deleted" x="7197" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2491" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="2653" y="0"/>
 </item>
-<item historyLabel="startup_gcc.c" index="1">
-<position info="not_deleted" x="15942" y="0"/>
+<item historyLabel="my_uart.h" index="3">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="my_uart.c" index="4">
+<position info="not_deleted" x="1495" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2030" y="0"/>
+<position info="not_deleted" x="2027" y="0"/>
 </item>
-<item historyLabel="app_can.c" index="3">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2197" y="0"/>
-</item>
-<item historyLabel="app_can.c" index="3">
-<position info="not_deleted" x="608" y="0"/>
-</item>
-<item historyLabel="app_can.h" index="4">
-<position info="not_deleted" x="341" y="0"/>
-</item>
-<item historyLabel="app_can.c" index="3">
-<position info="not_deleted" x="713" y="0"/>
-</item>
-<item historyLabel="app_can.h" index="4">
-<position info="not_deleted" x="342" y="0"/>
+<item historyLabel="uartstdio.c" index="1">
+<position info="not_deleted" x="43213" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2197" y="0"/>
+<position info="not_deleted" x="2956" y="0"/>
 </item>
-<item historyLabel="app_can.c" index="3">
-<position info="not_deleted" x="713" y="0"/>
-</item>
-<item historyLabel="app_can.h" index="4">
-<position/>
+<item historyLabel="my_uart.c" index="4">
+<position info="not_deleted" x="1546" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2222" y="0"/>
+<position info="not_deleted" x="2956" y="0"/>
 </item>
-<item historyLabel="app_can.h" index="4">
-<position info="not_deleted" x="341" y="0"/>
-</item>
-<item historyLabel="app_can.c" index="3">
-<position info="not_deleted" x="924" y="0"/>
-</item>
-<item historyLabel="app_can.h" index="4">
-<position info="not_deleted" x="341" y="0"/>
-</item>
-<item historyLabel="app_can.c" index="3">
-<position info="not_deleted" x="924" y="0"/>
+<item historyLabel="app_can.c" index="2">
+<position info="not_deleted" x="7197" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2259" y="0"/>
+<position info="not_deleted" x="2668" y="0"/>
 </item>
-<item historyLabel="app_can.c" index="3">
-<position info="not_deleted" x="924" y="0"/>
-</item>
-<item historyLabel="app_can.h" index="4">
-<position info="not_deleted" x="341" y="0"/>
-</item>
-<item historyLabel="app_can.c" index="3">
-<position info="not_deleted" x="9143" y="0"/>
+<item historyLabel="app_can.c" index="2">
+<position info="not_deleted" x="7197" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5649" y="0"/>
-</item>
-<item historyLabel="app_can.h" index="4">
-<position info="not_deleted" x="341" y="0"/>
-</item>
-<item historyLabel="app_can.c" index="3">
-<position info="not_deleted" x="9143" y="0"/>
+<position info="not_deleted" x="2596" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5649" y="0"/>
+<position info="not_deleted" x="4491" y="0"/>
 </item>
-<item historyLabel="app_can.h" index="4">
-<position info="not_deleted" x="341" y="0"/>
-</item>
-<item historyLabel="app_can.c" index="3">
-<position info="not_deleted" x="9980" y="0"/>
-</item>
-<item historyLabel="app_can.h" index="4">
-<position info="not_deleted" x="341" y="0"/>
+<item historyLabel="app_can.c" index="2">
+<position info="not_deleted" x="7197" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5649" y="0"/>
+<position info="not_deleted" x="5364" y="0"/>
+</item>
+<item historyLabel="app_can.c" index="2">
+<position info="not_deleted" x="7197" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2593" y="0"/>
+<position info="not_deleted" x="5364" y="0"/>
+</item>
+<item historyLabel="app_can.c" index="2">
+<position info="not_deleted" x="8640" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position/>
+<position info="not_deleted" x="5605" y="0"/>
 </item>
-<item historyLabel="app_can.c" index="3">
-<position info="not_deleted" x="9084" y="0"/>
-</item>
-<item historyLabel="can.h" index="5">
-<position info="not_deleted" x="13640" y="13"/>
-</item>
-<item historyLabel="app_can.c" index="3">
-<position info="not_deleted" x="9928" y="0"/>
+<item historyLabel="uartstdio.c" index="1">
+<position info="not_deleted" x="44011" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position/>
+<position info="not_deleted" x="5604" y="0"/>
 </item>
-<item historyLabel="app_can.c" index="6">
-<position info="not_deleted" x="9928" y="0"/>
+<item historyLabel="uartstdio.c" index="1">
+<position info="not_deleted" x="42573" y="10"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="5604" y="0"/>
+</item>
+<item historyLabel="my_uart.c" index="4">
+<position info="not_deleted" x="1544" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="5836" y="0"/>
+</item>
+<item historyLabel="app_can.c" index="2">
+<position info="not_deleted" x="558" y="0"/>
 </item>
 <item active="true" historyLabel="main.c" index="0">
-<position info="not_deleted" x="2732" y="0"/>
+<position info="not_deleted" x="5836" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -583,6 +588,12 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="topLeft"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="topRight"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -590,10 +601,20 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="my_uart.c" tooltip="CAN_drv_multiTX_example_2/my_uart.c">
+<persistable path="/CAN_drv_multiTX_example_2/my_uart.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="my_uart.h" tooltip="CAN_drv_multiTX_example_2/my_uart.h">
+<persistable path="/CAN_drv_multiTX_example_2/my_uart.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="uartstdio.c" tooltip="CAN_drv_multiTX_example_2/drivers/uartstdio.c">
+<persistable path="/CAN_drv_multiTX_example_2/drivers/uartstdio.c"/>
+</file>
 <file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="can.h" tooltip="/home/luca/src/stellaris/Tivaware/driverlib/can.h">
 <persistable path="/home/luca/src/stellaris/Tivaware/driverlib/can.h" project="CAN_drv_multiTX_example_2"/>
 </file>
@@ -629,15 +650,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="CAN_drv_multipleRX_example/main.c">
 <persistable path="/CAN_drv_multipleRX_example/main.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="CAN_drv_RX_example/main.c">
-<persistable path="/CAN_drv_RX_example/main.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="app_can.h" tooltip="CAN_drv_RX_example/app_can.h">
-<persistable path="/CAN_drv_RX_example/app_can.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="app_can.c" tooltip="CAN_drv_RX_example/app_can.c">
-<persistable path="/CAN_drv_RX_example/app_can.c"/>
 </file>
 </mruList>
 </workbench>

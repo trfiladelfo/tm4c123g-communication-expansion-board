@@ -194,7 +194,7 @@ void app_can_SendMultipleMsg(const uint64_t* pui64_msg, const uint16_t msg_lengt
 
 	/*____________________initialize and set all but the last CAN Message Objects_________________________*/
 	volatile uint8_t i;
-	for(i=0;i<=(CAN8BytePacketsNo - notExistShortCANPacket);i++){
+	for(i=0;i<=(CAN8BytePacketsNo - notExistShortCANPacket - 1);i++){
 			sCANMsgObject[i].ui32MsgID = CANMSG_ID;
 			sCANMsgObject[i].ui32MsgIDMask = 0;
 			sCANMsgObject[i].ui32Flags = MSG_OBJ_TX_INT_ENABLE | MSG_OBJ_FIFO;	// frame put into CAN message FIFO queue.
