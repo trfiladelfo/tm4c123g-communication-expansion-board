@@ -24,8 +24,8 @@
 #define SYSTICK_PERIOD 		50000000	// the number of clock ticks in each period of the SysTick counter
 #define SYSCLOCK			80000000	// 80 MHz
 
-#define MSG_LENGTH 			256			// maximum can msg length is 256 bytes (are tx up to 256/8=32 CAN frame)
-#define PACKETS_NO			((MSG_LENGTH % 8) ? ((MSG_LENGTH / 8) +1) : (MSG_LENGTH / 8))	// CAN packets to tx related to MSG_LENGTH
+#define MSG_LENGTH 			256			// maximum can msg length is 256 bytes (are transmitted up to 256/8=32 CAN frame)
+#define PACKETS_NO			((MSG_LENGTH % 8) ? ((MSG_LENGTH / 8) +1) : (MSG_LENGTH / 8))	// CAN packets to tx related to MSG_LENGTH (32 max.)
 
 volatile uint8_t err_flag = 0;
 volatile uint32_t CAN_status = 0;
@@ -33,9 +33,9 @@ uint32_t t = 0;
 uint32_t RxCount, TxCount;
 bool ErrCountFlag;
 
-static uint64_t msgData[MSG_LENGTH]; 		// can frame payload is 8 bytes max.
-											// Static is essential: place the variable in RW block of ram
-											// instead of into stack block ?
+static uint64_t msgData[PACKETS_NO]; 		// can frame payload is 8 bytes max.
+											// Static was essential if size of array is very large [e.g. 256]: place the variable
+											// in RW block of ram instead of into stack block ?
 
 
 void delay(unsigned int milliseconds) {
@@ -59,10 +59,10 @@ void CANIntHandler()
 				}
 		CANIntDisable(CAN0_BASE,CAN_INT_MASTER | CAN_INT_ERROR | CAN_INT_STATUS);	//disable all CAN0 interrupts
 	}
-	else if(CAN_status)							// message object 1 interrupt
+	else if(CAN_status)							// message object 1 interrupt CAN_status in range [1-32]
 	{											// number of the highest priority message object that has an interrupt pending
 		err_flag = 0;							// clear any error flags
-		UARTprintf("Transmitting: %X-%X-%X-%X\n", msgData[0],msgData[1],msgData[2],msgData[3]);
+		UARTprintf("Transmitted CAN Msg Obj #\%d; Its value is: \%016X\n",CAN_status, msgData[CAN_status-1]);
 		CANIntClear(CAN0_BASE,CAN_status);		// clear interrupt due to message object#CAN_status [1-32]
 	}
 	else																			// should never happen
@@ -88,7 +88,7 @@ int main(void)
 	app_can_init();
 /*_______________________INITIALIZATION OF MESSAGE OBJECT_______________________*/
 
-	volatile uint16_t i;
+	volatile uint8_t i;
 	for(i=0 ; i<PACKETS_NO ; i++){
 		msgData[i]=0x0101010101010101 * i;	// fill the 8 bytes content with its vector index number
 	}
@@ -126,14 +126,14 @@ int main(void)
     	else																		// NO ERROR -> TRANSMIT PACKET
 		{
     		CANIntEnable(CAN0_BASE,CAN_INT_MASTER | CAN_INT_ERROR | CAN_INT_STATUS);//	enable all CAN0 interrupts
-			app_can_SendMultipleMsg(msgData,sizeof msgData/8);
+			app_can_SendMultipleMsg(msgData, MSG_LENGTH);
 		}
     	//TODO: only for debug purposes. Comment out if not useful.
 		ErrCountFlag=CANErrCntrGet(CAN0_BASE, &RxCount, &TxCount);					// get the error flag and the error counters
 		UARTprintf("error number on CAN bus: RxCount= \%d; TxCount= \%d; Error flag: %s; t= %d;\n\r",
 					RxCount, TxCount,(ErrCountFlag?"True":"False"),t);				// print error counter
     	//
-	delay(500); 		// wait 500ms
+	delay(1000); 		// wait 1000ms
     }
 return 0;
 }
