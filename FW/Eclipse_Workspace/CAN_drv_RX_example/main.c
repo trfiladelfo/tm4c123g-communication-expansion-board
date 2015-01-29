@@ -38,6 +38,7 @@ void CANIntHandler ()
 					err_flag = 1;										// set the error flag
 					UARTprintf("Device connected on the CAN bus?\n\r");	// hint for connection trouble
 				}
+		CANIntDisable(CAN0_BASE,CAN_INT_MASTER | CAN_INT_ERROR | CAN_INT_STATUS);	//disable all CAN0 interrupts
 	}
 	else if(CAN_status == 1)											// message object 1 interrupt
 	{
@@ -48,6 +49,7 @@ void CANIntHandler ()
 	else																// should never happen
 	{
 		err_flag = 2 ;
+		CANIntDisable(CAN0_BASE,CAN_INT_MASTER | CAN_INT_ERROR | CAN_INT_STATUS);	//disable all CAN0 interrupts
 	}
 }
 
@@ -102,30 +104,35 @@ int main(void)
     	    		char Decoded_ControllerStsReg[30];
     	    		UARTprintf("BUS cable disconnected ? Please, reconnect...\n\r");							// print an hint
     				UARTprintf("\%s\n\r", app_can_DecodeControllerStsReg(CAN_status,Decoded_ControllerStsReg));	// print errors
+    				CANIntEnable(CAN0_BASE,CAN_INT_MASTER | CAN_INT_ERROR | CAN_INT_STATUS);	//	enable all CAN0 interrupts
     	    	}
-    	    	else if(err_flag==2) UARTprintf("Unexpected CAN bus interrupt\n\r");		// UNKNOWN ERROR
-    	    	else																		// NO ERROR -> RECEIVE PACKETS
-    			{
-    	    		if(rxFlag) 										// rx interrupt has occured
-    	    		{
-						msg.pui8MsgData = msgData; 					// set pointer to rx buffer
-						CANMessageGet(CAN0_BASE, 1, &msg, 0); 		// read CAN message object 1 from CAN peripheral
-						rxFlag = 0; 								// clear rx flag
-						if(msg.ui32Flags & MSG_OBJ_DATA_LOST) { 	// check msg flags for any lost messages
-							UARTprintf("CAN message loss detected\n\r");
-						}
-						// read colour data from rx buffer (scale from 0-255 to 0-0xFFFF for LED driver)
-						colour[0] = msgData[0] * 0xFF;
-						colour[1] = msgData[1] * 0xFF;
-						colour[2] = msgData[2] * 0xFF;
-						intensity = msgData[3] / 255.0f; 			// scale from 0-255 to float 0-1
-						// write to UART for debugging
-						UARTprintf("Received colour\tr: %d\tg: %d\tb: %d\ti: %d\n", msgData[0], msgData[1], msgData[2], msgData[3]);
-						// set colour and intensity
-						RGBSet(colour, intensity);
-    	    		}
+		else if(err_flag==2){
+			UARTprintf("Unexpected CAN bus interrupt\n\r");		// UNKNOWN ERROR
+			CANIntEnable(CAN0_BASE,CAN_INT_MASTER | CAN_INT_ERROR | CAN_INT_STATUS);	//	enable all CAN0 interrupts
+		}
+		else																		// NO ERROR -> RECEIVE PACKETS
+		{
+			CANIntEnable(CAN0_BASE,CAN_INT_MASTER | CAN_INT_ERROR | CAN_INT_STATUS);	//	enable all CAN0 interrupts
+			if(rxFlag) 										// rx interrupt has occured
+			{
+				msg.pui8MsgData = msgData; 					// set pointer to rx buffer
+				CANMessageGet(CAN0_BASE, 1, &msg, 0); 		// read CAN message object 1 from CAN peripheral
+				rxFlag = 0; 								// clear rx flag
+				if(msg.ui32Flags & MSG_OBJ_DATA_LOST) { 	// check msg flags for any lost messages
+					UARTprintf("CAN message loss detected\n\r");
+				}
+				// read colour data from rx buffer (scale from 0-255 to 0-0xFFFF for LED driver)
+				colour[0] = msgData[0] * 0xFF;
+				colour[1] = msgData[1] * 0xFF;
+				colour[2] = msgData[2] * 0xFF;
+				intensity = msgData[3] / 255.0f; 			// scale from 0-255 to float 0-1
+				// write to UART for debugging
+				UARTprintf("Received colour\tr: %d\tg: %d\tb: %d\ti: %d\n", msgData[0], msgData[1], msgData[2], msgData[3]);
+				// set colour and intensity
+				RGBSet(colour, intensity);
+			}
 
-    			}
+		}
     }
 
 return 0;
